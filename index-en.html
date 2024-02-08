@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="img/favocon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+Display:wght@300&family=Noto+Sans:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/swiper.css" />
+    <link rel="stylesheet" href="./css/intlTelInput.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>“Georgia Asgard Towers”</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container container--big">
+        <div class="header__wrapper">
+          <div class="header__content">
+            <nav class="header__links">
+              <button class="header__link" data-scroll-smooth="about">About project</button>
+              <button class="header__link" data-scroll-smooth="infrastructure">
+                Infrastructure
+              </button>
+              <button class="header__link" data-scroll-smooth="environment">Location</button>
+              <button class="header__link" data-scroll-smooth="footer">Contacts</button>
+            </nav>
+            <div class="header__langs">
+              <a href="./index.html" class="header__lang">RU</a>
+              <div class="header__lang header__lang--active">EN</div>
+              <!-- <a href="" class="header__lang">UA</a> -->
+            </div>
+          </div>
+          <button class="burger__btn"><span></span></button>
+        </div>
+      </div>
+      <div class="burger"></div>
+    </header>
+
+    <section class="cover">
+      <div class="container container--big">
+        <div class="cover__wrapper">
+          <div class="cover__content">
+            <div class="cover__title">
+              Residential complex <br />
+              “Georgia Asgard Towers”
+            </div>
+            <div class="cover__info">
+              <div class="cover__info-title">benefit from 10 to 20%</div>
+              <div class="cover__info-text">
+                <span class="--select">Special offer</span> <br />
+                for a limited pool of apartments
+              </div>
+            </div>
+            <button class="cover__btn btn modal__btn-active" data-modal-src="modal">
+              Contact a manager
+            </button>
+          </div>
+          <form class="cover__form form-send" action="/" method="post">
+            <div class="cover__form-info">
+              <div class="cover__form-info-img"><img src="./img/cover/form/img.png" alt="" /></div>
+              <div class="cover__form-info-text">
+                <p>Download a PDF presentation of the complex in 1 click</p>
+                <img src="./img/icons/arrow-r.svg" alt="" />
+              </div>
+            </div>
+            <div class="cover__form-elem">
+              <!-- <input type="text" name="" required value="" class="cover__form-input" /> -->
+              <div class="form__input-block">
+                <input
+                  type="tel"
+                  required
+                  placeholder=""
+                  name="phone"
+                  value=""
+                  class="form__input phone"
+                  id="phone"
+                />
+                <div class="form__input-text error-msg" id="error-msg"></div>
+              </div>
+              <button class="cover__form-btn btn">Download a presentation</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about__wrapper">
+          <div class="about__title title">Residential complex “Georgia Asgard Towers”</div>
+          <div class="about__content">
+            <div class="about__infos info">
+              <div class="info__item">
+                <p class="about__info">
+                  A unique space in the heart of Tbilisi for those who strives for more
+                </p>
+              </div>
+              <div class="info__item">
+                <p class="about__info">
+                  All the necessary infrastructure for a comfortable life and the dynamics of the
+                  city. Galleries of fashion brands, gyms, restaurants and cafes. Prompt and
+                  convenient solution to everyday issues.
+                </p>
+              </div>
+              <div class="info__item">
+                <p class="about__info">
+                  Asgard Towers - architectural project NS STUDIO Architecture & Design
+                </p>
+              </div>
+            </div>
+            <div class="about__video">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/-CTlz5PJRZs?si=JORlPaKn7NRZqCxt&amp;controls=0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="infrastructure" id="infrastructure">
+      <div class="container">
+        <div class="infrastructure__wrapper">
+          <div class="infrastructure__title title">Infrastructure</div>
+          <div class="infrastructure__content">
+            <div class="infrastructure__info-block">
+              <div class="infrastructure__desc-block">
+                <div class="infrastructure__desc infrastructure__content-item">
+                  <div class="infrastructure__content-title">Impressive architectural concept</div>
+                  <div class="infrastructure__desc-text">
+                    The perfection of the towers' lines creates a space where the sky is not the
+                    limit. The ideal combination of aesthetics and functionality in the apartments
+                    of the house allows you to experience a new form of freedom.
+                  </div>
+                </div>
+                <div class="infrastructure__img infrastructure__content-item">
+                  <img src="./img/infrastructure/imgs/1.png" alt="" />
+                </div>
+              </div>
+
+              <div class="infrastructure__mob"></div>
+
+              <div class="infrastructure__info infrastructure__content-item">
+                <div class="infrastructure__content-title">Premium lifestyle area</div>
+                <div class="infrastructure__info-items">
+                  <div class="infrastructure__info-item">
+                    <div class="infrastructure__info-item-text">restaurant on the roof</div>
+                    <div class="infrastructure__info-item-img">
+                      <img src="./img/infrastructure/items/1.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="infrastructure__info-item">
+                    <div class="infrastructure__info-item-text">gym</div>
+                    <div class="infrastructure__info-item-img">
+                      <img src="./img/infrastructure/items/2.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="infrastructure__info-item">
+                    <div class="infrastructure__info-item-text">spa</div>
+                    <div class="infrastructure__info-item-img">
+                      <img src="./img/infrastructure/items/3.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="infrastructure__info-item">
+                    <div class="infrastructure__info-item-text">children's room</div>
+                    <div class="infrastructure__info-item-img">
+                      <img src="./img/infrastructure/items/4.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="infrastructure__info-item">
+                    <div class="infrastructure__info-item-text">
+                      underground parking on 4 floors
+                    </div>
+                    <div class="infrastructure__info-item-img">
+                      <img src="./img/infrastructure/items/5.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="infrastructure__info-item">
+                    <div class="infrastructure__info-item-text">supermarket</div>
+                    <div class="infrastructure__info-item-img">
+                      <img src="./img/infrastructure/items/6.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="infrastructure__info-item">
+                    <div class="infrastructure__info-item-text">pharmacy</div>
+                    <div class="infrastructure__info-item-img">
+                      <img src="./img/infrastructure/items/7.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="infrastructure__info-item">
+                    <div class="infrastructure__info-item-text">gallery shops</div>
+                    <div class="infrastructure__info-item-img">
+                      <img src="./img/infrastructure/items/8.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="infrastructure__imgs">
+              <div class="infrastructure__img-item infrastructure__content-item">
+                <img src="./img/infrastructure/imgs/2.png" alt="" />
+              </div>
+              <div class="infrastructure__img-item infrastructure__content-item">
+                <img src="./img/infrastructure/imgs/3.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="environment" id="environment">
+      <div class="container">
+        <div class="environment__wrapper">
+          <div class="environment__title title">Stunning views of Tbilisi</div>
+          <div class="environment__info">
+            <div class="environment__info-text environment__info--bg environment__info--brad">
+              <p>Ideal location and proximity to important locations</p>
+              <p>
+                Everything that one of the best cities in the world can interest you is 5 minutes
+                away from Asgard Towers
+              </p>
+            </div>
+            <div class="environment__info-img environment__info--brad">
+              <img src="./img/environment/info/img.png" alt="" />
+            </div>
+            <div class="environment__info-list environment__info--bg environment__info--brad">
+              <div class="environment__info-list-i">
+                Walking along the embankment to any attraction in the city center
+              </div>
+              <div class="environment__info-list-i">Water buses right in front of the house</div>
+              <div class="environment__info-list-i">
+                Nearby is a park with fountains, a restaurant and a walking area
+              </div>
+              <div class="environment__info-list-i">
+                Nearby are the best parks of the city - Kikvidze, Mushtaidi, and Dynamo Arena
+              </div>
+              <div class="environment__info-list-i">
+                Within walking distance of a metro station, market, bus station, clinic center
+              </div>
+              <div class="environment__info-list-i">
+                Near the Prosecutor General's Office and the court, and across the street Bank of
+                Georgia
+              </div>
+              <div class="environment__info-list-i">
+                Exit to two central highways - Tsereteli Avenue and Baratashvili Embankment
+              </div>
+            </div>
+            <div class="environment__info-map environment__info--brad">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.2278235329463!2d44.87357249999999!3d41.7156025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4044127fb7627d75%3A0x1fba3a54ea818039!2sHotels%20%26%20Preference%20Hualing%20Tbilisi!5e0!3m2!1sru!2sua!4v1706984621001!5m2!1sru!2sua"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+          <div class="environment__imgs">
+            <div class="environment__img"><img src="./img/environment/imgs/1.png" alt="" /></div>
+            <div class="environment__img"><img src="./img/environment/imgs/2.png" alt="" /></div>
+            <div class="environment__img"><img src="./img/environment/imgs/3.png" alt="" /></div>
+            <div class="environment__img"><img src="./img/environment/imgs/4.png" alt="" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="interests">
+      <div class="container">
+        <div class="interests__wrapper">
+          <div class="interests__title title">What is interesting about Georgia?</div>
+          <div class="interests__content">
+            <div class="interests__items">
+              <div class="interests__item">
+                <div class="interests__item-img">
+                  <img src="./img/interests/icons/1.svg" alt="" />
+                </div>
+                <div class="interests__item-text">
+                  One of the most affordable countries to move to
+                </div>
+              </div>
+              <div class="interests__item">
+                <div class="interests__item-img">
+                  <img src="./img/interests/icons/2.svg" alt="" />
+                </div>
+                <div class="interests__item-text">
+                  Convenient air connections, plus the construction of a new international airport
+                  in Tbilisi
+                </div>
+              </div>
+              <div class="interests__item">
+                <div class="interests__item-img">
+                  <img src="./img/interests/icons/3.svg" alt="" />
+                </div>
+                <div class="interests__item-text">
+                  No language barrier and there are legends about Georgian hospitality
+                </div>
+              </div>
+              <div class="interests__item">
+                <div class="interests__item-img">
+                  <img src="./img/interests/icons/4.svg" alt="" />
+                </div>
+                <div class="interests__item-text">
+                  Decent education: prestigious universities, branches of international schools and
+                  academies
+                </div>
+              </div>
+              <div class="interests__item">
+                <div class="interests__item-img">
+                  <img src="./img/interests/icons/5.svg" alt="" />
+                </div>
+                <div class="interests__item-text">
+                  Good prospects for business, investment, career growth
+                </div>
+              </div>
+              <div class="interests__item">
+                <div class="interests__item-img">
+                  <img src="./img/interests/icons/6.svg" alt="" />
+                </div>
+                <div class="interests__item-text">Wonderful climate, ecology, nature</div>
+              </div>
+              <div class="interests__item">
+                <div class="interests__item-img">
+                  <img src="./img/interests/icons/7.svg" alt="" />
+                </div>
+                <div class="interests__item-text">
+                  Authentic cuisine, abundance of fresh vegetables and fruits
+                </div>
+              </div>
+              <div class="interests__item">
+                <div class="interests__item-img">
+                  <img src="./img/interests/icons/8.svg" alt="" />
+                </div>
+                <div class="interests__item-text">
+                  Georgia is the birthplace of wine! Fact recognized by UNESCO
+                </div>
+              </div>
+            </div>
+            <div class="interests__img"><img src="./img/interests/img.png" alt="" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="market">
+      <div class="container">
+        <div class="market__wrapper">
+          <div class="market__title title">Real estate market in Georgia</div>
+          <div class="market__items">
+            <div class="market__item">
+              <div class="market__item-title">Influx of tourists</div>
+              <div class="market__item-text">2024</div>
+              <div class="market__item-info">11.000.000</div>
+            </div>
+            <div class="market__item">
+              <div class="market__item-title">Rising prices for housing</div>
+              <div class="market__item-text">in year</div>
+              <div class="market__item-info">18-20%</div>
+            </div>
+            <div class="market__item">
+              <div class="market__item-title">Apartments in Georgia</div>
+              <div class="market__item-text">the price went up not by 10</div>
+              <div class="market__item-info">but by 20%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="block-1">
+      <section class="reasons">
+        <div class="container">
+          <div class="reasons__wrapper">
+            <div class="reasons__title title">5 reasons to invest to real estate in Georgia</div>
+            <div class="reasons__items">
+              <div class="reasons__item">
+                <div class="reasons__item-title">
+                  <div class="reasons__item-title-num">1</div>
+                  <div class="reasons__item-title-text">Minimum bureaucracy</div>
+                </div>
+                <div class="reasons__item-list">
+                  <div class="reasons__item-list-elem">One of the best tax systems in Europe</div>
+                  <div class="reasons__item-list-elem">Advanced digitalization</div>
+                  <div class="reasons__item-list-elem">
+                    Simple and convenient conditions for doing business
+                  </div>
+                  <div class="reasons__item-list-elem">Opening a bank account - instantly</div>
+                  <div class="reasons__item-list-elem">
+                    Opening an individual entrepreneur - 2-3 days
+                  </div>
+                  <div class="reasons__item-list-elem">Ability to conduct business remotely</div>
+                </div>
+              </div>
+              <div class="reasons__item">
+                <div class="reasons__item-title">
+                  <div class="reasons__item-title-num">2</div>
+                  <div class="reasons__item-title-text">Rapid development of infrastructure</div>
+                </div>
+                <div class="reasons__item-text">
+                  <p>
+                    A large-scale program for the development of cities and resorts is underway in
+                    Georgia.
+                  </p>
+                  <p>
+                    The construction of a new international airport in Tbilisi, Anaklia port,
+                    highways and neighborhoods speaks of the economic growth of the country
+                  </p>
+                </div>
+              </div>
+              <div class="reasons__item">
+                <div class="reasons__item-title">
+                  <div class="reasons__item-title-num">3</div>
+                  <div class="reasons__item-title-text">LOW COMPETITION</div>
+                </div>
+                <div class="reasons__item-text">
+                  <p>
+                    In the premium segment, there is an acute shortage of housing in areas of the
+                    old city that are pleasant to walk in, but not many are ready to live with the
+                    traditional Georgian flavor.
+                  </p>
+                  <p>
+                    Therefore, in Tbilisi they very quickly rent and buy apartments with designer
+                    renovations in new modern houses
+                  </p>
+                </div>
+              </div>
+              <div class="reasons__item">
+                <div class="reasons__item-title">
+                  <div class="reasons__item-title-num">4</div>
+                  <div class="reasons__item-title-text">
+                    LARGE FLOW OF TOURISTS, RESIDENTS, COMPANIES
+                  </div>
+                </div>
+                <div class="reasons__item-text">
+                  <p>
+                    For all known reasons, not only the number of tourists is growing, but also
+                    emigrants, entrepreneurs, foreign companies and their employees.
+                  </p>
+                  <p>They all need somewhere to live, temporarily or permanently</p>
+                </div>
+              </div>
+              <div class="reasons__item">
+                <div class="reasons__item-title">
+                  <div class="reasons__item-title-num">5</div>
+                  <div class="reasons__item-title-text">GROWTH OF THE REAL ESTATE MARKET</div>
+                </div>
+                <div class="reasons__item-text">
+                  <p>
+                    Demand for real estate in Georgia remains at a high level. And not only because
+                    of the wave of emigration, but also the tendency for local residents to move
+                    from rural areas to cities
+                  </p>
+                  <p>
+                    Over the past 2 years, real estate prices in Georgia have increased
+                    significantly and continue to grow
+                  </p>
+                </div>
+              </div>
+              <div class="reasons__img"><img src="./img/reasons/img.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="company">
+        <div class="container">
+          <div class="company__wrapper">
+            <div class="company__title title">ABOUT COMPANY</div>
+            <div class="company__items">
+              <div class="company__about company__item">
+                <div class="company__about-title">ASGARD</div>
+                <div class="company__about-text">
+                  is engaged in the creation and support of construction projects around the world
+                </div>
+              </div>
+              <div class="company__img company__item"><img src="./img/company/1.png" alt="" /></div>
+              <div class="company__info">
+                <p>
+                  Today the company is developing and implementing construction projects in 4
+                  countries: Turkey, Georgia, UAE, Ghana and continues to develop new lands.
+                </p>
+                <p>
+                  Asgard Estate takes a responsible approach to choosing the market in which the
+                  company's properties will be presented. We work only with trusted partners and
+                  developers and are focused on the high quality of constructed real estate
+                  properties.
+                </p>
+              </div>
+              <div class="company__img company__item"><img src="./img/company/2.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects">
+        <div class="container">
+          <div class="projects__wrapper">
+            <div class="projects__title title">PROJECTS</div>
+            <div class="projects__content">
+              <div class="projects__item">
+                <div class="projects__item-title">
+                  <p>Turkey</p>
+                  <p>eco premium</p>
+                </div>
+                <div class="projects__item-slider">
+                  <div class="swiper-wrapper">
+                    <div class="projects__item-slider-item swiper-slide">
+                      <img src="./img/projects/items/1.png" alt="" />
+                    </div>
+                    <div class="projects__item-slider-item swiper-slide">
+                      <img src="./img/projects/items/2.png" alt="" />
+                    </div>
+                    <div class="projects__item-slider-item swiper-slide">
+                      <img src="./img/projects/items/3.png" alt="" />
+                    </div>
+                    <div class="projects__item-slider-item swiper-slide">
+                      <img src="./img/projects/items/4.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="projects__item">
+                <div class="projects__item-title">
+                  <p>Georgia</p>
+                  <p>lisi premium</p>
+                </div>
+                <div class="projects__item-slider">
+                  <div class="swiper-wrapper">
+                    <div class="projects__item-slider-item swiper-slide">
+                      <img src="./img/projects/items/5.png" alt="" />
+                    </div>
+                    <div class="projects__item-slider-item swiper-slide">
+                      <img src="./img/projects/items/6.png" alt="" />
+                    </div>
+                    <div class="projects__item-slider-item swiper-slide">
+                      <img src="./img/projects/items/7.png" alt="" />
+                    </div>
+                    <div class="projects__item-slider-item swiper-slide">
+                      <img src="./img/projects/items/8.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="projects__item">
+                <div class="projects__item-title">
+                  <p>UAE</p>
+                  <p>coming soon</p>
+                </div>
+                <div class="projects__item-img">
+                  <img src="./img/projects/items/9.png" alt="" />
+                  <div class="projects__item-img-text">Coming soon!</div>
+                </div>
+              </div>
+              <div class="projects__item">
+                <div class="projects__item-title">
+                  <p>Ghana</p>
+                  <p>coming soon</p>
+                </div>
+                <div class="projects__item-img">
+                  <img src="./img/projects/items/10.png" alt="" />
+                  <div class="projects__item-img-text">Coming soon!</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="developer">
+      <div class="container">
+        <div class="developer__wrapper">
+          <div class="developer__title title">DEVELOPER</div>
+          <div class="developer__content">
+            <div class="developer__info">
+              <div class="developer__info-text">
+                SMS is a pioneer in the field of construction management in Georgia. Over its
+                ten-year history, it has become the largest company on the market.
+              </div>
+              <div class="developer__info-items">
+                <div class="developer__info-item">
+                  <div class="developer__info-item-text">Completed projects in portfolio</div>
+                  <div class="developer__info-item-num">77</div>
+                </div>
+                <div class="developer__info-item">
+                  <div class="developer__info-item-text">Current projects in portfolio</div>
+                  <div class="developer__info-item-num">18</div>
+                </div>
+                <div class="developer__info-item">
+                  <div class="developer__info-item-text">The total investment exceeds</div>
+                  <div class="developer__info-item-num">2&nbsp;billion&nbsp;$</div>
+                </div>
+              </div>
+            </div>
+            <div class="developer__logos">
+              <div class="developer__logos-block">
+                <div class="developer__logo"><img src="./img/developer/logos/1.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/2.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/3.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/4.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/5.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/6.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/7.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/8.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/9.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/10.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/11.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/12.svg" alt="" /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="interior">
+      <div class="container">
+        <div class="interior__wrapper">
+          <div class="interior__title title">INTERIOR</div>
+          <div class="interior__info">
+            <div class="interior__info-title">
+              ALL APARTMENTS ARE OFFERED WITH A HIGH-CLASS FINISH
+            </div>
+            <div class="interior__info-items">
+              <div class="interior__info-item">
+                Clear ceilings from 3 meters maximum light and space.
+              </div>
+              <div class="interior__info-item">Panoramic glazing with the ability to open.</div>
+              <div class="interior__info-item">Ventilation and air conditioning system.</div>
+            </div>
+          </div>
+          <div class="interior__imgs">
+            <div class="interior__img"><img src="./img/interior/imgs/1.png" alt="" /></div>
+            <div class="interior__img"><img src="./img/interior/imgs/2.png" alt="" /></div>
+            <div class="interior__img"><img src="./img/interior/imgs/3.png" alt="" /></div>
+            <div class="interior__img"><img src="./img/interior/imgs/4.png" alt="" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="investor">
+      <div class="container">
+        <div class="investor__wrapper">
+          <div class="investor__title title">PASSIVE INVESTOR</div>
+          <div class="investor__content">
+            <div class="investor__items">
+              <div class="investor__item">
+                <div class="investor__decor"><img src="./img/investor/decor.png" alt="" /></div>
+                <p>TRY ON THE ROLE OF A PASSIVE INVESTOR</p>
+                <p>
+                  TRANSFER YOUR APARTMENT TO OUR COMPANY'S
+                  <span> TRUST MANAGEMENT AND RECEIVE YOUR % ON THE CARD MONTHLY </span>
+                </p>
+              </div>
+              <div class="investor__item investor__item--align">
+                <p>
+                  *WHEN 100% PAYMENT OF THE APARTMENT WE GUARANTEES <span>AN 8% ANNUAL</span> INCOME
+                  FROM RENT UNDER OUR MANAGEMENT FOR 3 YEARS!
+                </p>
+              </div>
+            </div>
+            <div class="investor__desc">
+              <div class="investor__info-title">ADVANTAGES OF TRUST PROPERTY MANAGEMENT</div>
+
+              <div class="investor__infos info">
+                <div class="info__item">
+                  <p class="investor__info">
+                    Save time. The owner does not have to search for tenants, show apartments, enter
+                    into an agreement, or worry about paying for utilities.
+                  </p>
+                </div>
+                <div class="info__item">
+                  <p class="investor__info">
+                    The manager solves any problems that arise. If the neighbors flood the tenants
+                    from above, they will call him, and not the owner.
+                  </p>
+                </div>
+                <div class="info__item">
+                  <p class="investor__info">
+                    There is no need to spend money on legal services. All contracts with residents
+                    are concluded by the manager.
+                  </p>
+                </div>
+                <div class="info__item">
+                  <p class="investor__info">
+                    Wear and tear on the premises may not be your concern. The manager accepts the
+                    apartment from the residents and decides on its renovation, repairs and rental
+                    price. Cleaning after residents can also be included in the range of services.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proposal">
+      <div class="container">
+        <div class="proposal__wrapper">
+          <div class="proposal__title title">EXCLUSIVE OFFER FOR ASGARD ESTATE CLIENTS</div>
+          <div class="proposal__items">
+            <div class="proposal__item">
+              <div class="proposal__item-title">PROMOTIONAL OFFER FOR ASGARD ESTATE CLIENTS</div>
+              <div class="proposal__item-elems">
+                <div class="proposal__item-elem">
+                  <div class="proposal__item-elem-title">Cost at the construction stage:</div>
+                  <div class="proposal__item-elem-text"><span>$1350 PER 1 SQ.M</span></div>
+                </div>
+                <div class="proposal__item-elem">
+                  <div class="proposal__item-elem-title">Estimated sale price:</div>
+                  <div class="proposal__item-elem-text"><span>FROM $2500 PER 1 SQ.M.</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="proposal__item">
+              <div class="proposal__item-title">APPROPRIATE PROFITABILITY</div>
+              <div class="proposal__item-elems">
+                <div class="proposal__item-elem">
+                  <div class="proposal__item-elem-text"><span>57% FOR CICA </span></div>
+                </div>
+              </div>
+            </div>
+            <div class="proposal__item">
+              <div class="proposal__item-title">LIMITED OFFER</div>
+              <div class="proposal__item-elems">
+                <div class="proposal__item-elem">
+                  <div class="proposal__item-elem-text">
+                    After all, only <span>1&nbsp;000&nbsp;кв.м.</span> in Asgard Towers residential
+                    complex are available to our clients
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="conditions">
+      <div class="container">
+        <div class="conditions__wrapper">
+          <div class="conditions__title title">PURCHASE TERMS</div>
+          <div class="conditions__content">
+            <div class="conditions__steps">
+              <div class="conditions__steps-title">
+                IT’S SIMPLE TO BECOME THE OWNER OF A SPACIOUS AND COZY APARTMENT IN ASGARD TOWERS
+              </div>
+              <div class="conditions__steps-items">
+                <div class="conditions__steps-item">
+                  <div class="conditions__steps-item-title">STEP 1.</div>
+                  <div class="conditions__steps-item-text">
+                    Leave your request and our manager will contact you.
+                  </div>
+                </div>
+                <div class="conditions__steps-item">
+                  <div class="conditions__steps-item-title">STEP 2.</div>
+                  <div class="conditions__steps-item-text">Choose an apartment.</div>
+                </div>
+                <div class="conditions__steps-item">
+                  <div class="conditions__steps-item-title">STEP 3.</div>
+                  <div class="conditions__steps-item-text">Sign the contract and make payment.</div>
+                </div>
+              </div>
+            </div>
+
+            <button class="conditions__btn btn modal__btn-active" data-modal-src="modal">
+              Submit your application
+            </button>
+
+            <div class="conditions__steps">
+              <div class="conditions__steps-title conditions__steps-title--mrg">
+                COMFORTABLE CONDITIONS FOR EACH CLIENT
+              </div>
+              <div class="conditions__steps-text">
+                We have sealed the partnership with TBC Bank and you have the opportunity to get a
+                mortgage for our project on favorable terms:
+              </div>
+
+              <div class="interior__info-items interior__info-items--tmpl-2">
+                <div class="interior__info-item">a blue package of documents</div>
+                <div class="interior__info-item">
+                  with the possibility of concluding an agreement online
+                </div>
+              </div>
+            </div>
+
+            <div class="conditions__text">
+              *Interest rates on mortgage loans are considered individually and depend on the down
+              payment, payment term and other circumstances.
+            </div>
+
+            <div class="conditions__items">
+              <div class="conditions__item">
+                <div class="conditions__item-img">
+                  <img src="./img/conditions/items/1.png" alt="" />
+                </div>
+                <div class="conditions__item-text">Interest-free installments up to 12 months</div>
+              </div>
+              <div class="conditions__item">
+                <div class="conditions__item-img">
+                  <img src="./img/conditions/items/2.png" alt="" />
+                </div>
+                <div class="conditions__item-text">Mortgage for up to 10 years</div>
+              </div>
+              <div class="conditions__item">
+                <div class="conditions__item-img">
+                  <img src="./img/conditions/items/3.png" alt="" />
+                </div>
+                <div class="conditions__item-text">Down payment from 30%</div>
+              </div>
+              <div class="conditions__item">
+                <div class="conditions__item-img">
+                  <img src="./img/conditions/items/4.png" alt="" />
+                </div>
+                <div class="conditions__item-text">Cashless payment in any currency</div>
+              </div>
+              <div class="conditions__item">
+                <div class="conditions__item-img">
+                  <img src="./img/conditions/items/5.png" alt="" />
+                </div>
+                <div class="conditions__item-text">Payment possible in USDT</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="footer"></footer>
+
+    <div class="modal__wrapper" data-modal-window="modal">
+      <div class="modal__content">
+        <div class="modal__btn-close">
+          <span class="icon-close"></span>
+        </div>
+        <form id="form" class="form form-send" action="/" method="post">
+          <div class="form__title">
+            To get a consultation from a manager, please enter your details in the fields below
+          </div>
+          <div class="form__inputs">
+            <div class="form__input-block">
+              <input type="hidden" value="" name="country-code" id="country-code" />
+              <input
+                type="text"
+                required
+                placeholder="Name"
+                name="name"
+                value=""
+                class="form__input val val-name"
+              />
+              <div class="form__input-text">Name entered incorrectly</div>
+            </div>
+            <div class="form__input-block">
+              <input
+                type="text"
+                required
+                placeholder="Last name"
+                name="surname"
+                value=""
+                class="form__input val val-name"
+              />
+              <div class="form__input-text">Last name entered incorrectly</div>
+            </div>
+            <div class="form__input-block">
+              <input
+                type="tel"
+                required
+                placeholder=""
+                name="phone"
+                value=""
+                class="form__input phone"
+                id="phone"
+              />
+              <div class="form__input-text error-msg" id="error-msg"></div>
+            </div>
+          </div>
+
+          <div class="form__checkbox-block">
+            <input type="checkbox" id="agree" name="agree" class="form__input-checkbox" />
+            <label class="form__input-checkbox-label" for="agree"></label>
+            <p>
+              I give my consent for the processing of the data I have provided by ASGARD ESTATE -
+              FZCO (No. - 24755, Dubai, UAE) and ECO INVESTMENTS (No. 3240954085, Antalya, Turkey)
+              for the purpose of providing me with consulting services and information about real
+              estate purchase for a period of 3 months.
+            </p>
+          </div>
+
+          <div class="form__btn"><button class="btn">Submit</button></div>
+
+          <div class="form__text">
+            <span class="icon-mail"></span>
+            <p>
+              To withdraw consent, please contact us by email
+              <a href="mailto:legal@asgard.estate">legal@asgard.estate</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/intlTelInput.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/form-validation.js"></script>
+    <script src="./js/resize.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

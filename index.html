@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favocon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+Display:wght@300&family=Noto+Sans:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/swiper.css" />
+    <link rel="stylesheet" href="./css/intlTelInput.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>ЖК “Georgia Asgard Towers”</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container container--big">
+        <div class="header__wrapper">
+          <div class="header__content">
+            <nav class="header__links">
+              <button class="header__link" data-scroll-smooth="about">О проекте</button>
+              <button class="header__link" data-scroll-smooth="infrastructure">
+                Инфраструктура
+              </button>
+              <button class="header__link" data-scroll-smooth="environment">Расположение</button>
+              <button class="header__link" data-scroll-smooth="footer">Контакты</button>
+            </nav>
+            <div class="header__langs">
+              <div class="header__lang header__lang--active">RU</div>
+              <a href="./index-en.html" class="header__lang">EN</a>
+              <!-- <a href="" class="header__lang">UA</a> -->
+            </div>
+          </div>
+          <button class="burger__btn"><span></span></button>
+        </div>
+      </div>
+      <div class="burger"></div>
+    </header>
+
+    <section class="cover">
+      <div class="container container--big">
+        <div class="cover__wrapper">
+          <div class="cover__content">
+            <div class="cover__title">
+              ЖК “Georgia <br />
+              Asgard Towers”
+            </div>
+            <div class="cover__info">
+              <div class="cover__info-title">выгода от 10 до 20%</div>
+              <div class="cover__info-text">
+                <span class="--select">Специальное предложение</span> <br />
+                на ограниченный пул апартаментов
+              </div>
+            </div>
+            <button class="cover__btn btn modal__btn-active" data-modal-src="modal">
+              Связаться с менеджером
+            </button>
+          </div>
+          <form class="cover__form form-send" action="/" method="post">
+            <div class="cover__form-info">
+              <div class="cover__form-info-img"><img src="./img/cover/form/img.png" alt="" /></div>
+              <div class="cover__form-info-text">
+                <p>Скачайте PDF-презентацию комплекса в 1 клик</p>
+                <img src="./img/icons/arrow-r.svg" alt="" />
+              </div>
+            </div>
+            <div class="cover__form-elem">
+              <!-- <input type="text" name="" required value="" class="cover__form-input" /> -->
+              <div class="form__input-block">
+                <input
+                  type="tel"
+                  required
+                  placeholder=""
+                  name="phone"
+                  value=""
+                  class="form__input phone"
+                />
+                <div class="form__input-text error-msg" id="error-msg"></div>
+              </div>
+              <button class="cover__form-btn btn">Скачать презентацию</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about__wrapper">
+          <div class="about__title title">ЖК “Georgia Asgard Towers”</div>
+          <div class="about__content">
+            <div class="about__infos info">
+              <div class="info__item">
+                <p class="about__info">
+                  Уникальное пространство в самом сердце Тбилиси для тех, кто стремится к большему
+                </p>
+              </div>
+              <div class="info__item">
+                <p class="about__info">
+                  Вся необходимая инфраструктура для комфортной жизни и динамика города. Галереи
+                  модных брендов, спортзал, рестораны и кафе. Оперативное и удобное решение бытовых
+                  вопросов.
+                </p>
+              </div>
+              <div class="info__item">
+                <p class="about__info">
+                  Asgard Towers — архитектурный проект NS STUDIO Architecture & Design
+                </p>
+              </div>
+            </div>
+            <div class="about__video">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/-CTlz5PJRZs?si=JORlPaKn7NRZqCxt&amp;controls=0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="infrastructure" id="infrastructure">
+      <div class="container">
+        <div class="infrastructure__wrapper">
+          <div class="infrastructure__title title">Инфраструктура</div>
+          <div class="infrastructure__content">
+            <div class="infrastructure__info-block">
+              <div class="infrastructure__desc-block">
+                <div class="infrastructure__desc infrastructure__content-item">
+                  <div class="infrastructure__content-title">
+                    Впечатляющая архитектурная концепция
+                  </div>
+                  <div class="infrastructure__desc-text">
+                    Совершенство линий башен создает пространство, где небо не предел. Идеальное
+                    сочетание эстетики и функциональности в апартаментах дома позволяет ощутить
+                    новую форму свободы.
+                  </div>
+                </div>
+                <div class="infrastructure__img infrastructure__content-item">
+                  <img src="./img/infrastructure/imgs/1.png" alt="" />
+                </div>
+              </div>
+
+              <div class="infrastructure__mob"></div>
+
+              <div class="infrastructure__info infrastructure__content-item">
+                <div class="infrastructure__content-title">
+                  Территория премиального образа жизни
+                </div>
+                <div class="infrastructure__info-items">
+                  <div class="infrastructure__info-item">
+                    <div class="infrastructure__info-item-text">ресторан на крыше</div>
+                    <div class="infrastructure__info-item-img">
+                      <img src="./img/infrastructure/items/1.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="infrastructure__info-item">
+                    <div class="infrastructure__info-item-text">тренажерный зал</div>
+                    <div class="infrastructure__info-item-img">
+                      <img src="./img/infrastructure/items/2.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="infrastructure__info-item">
+                    <div class="infrastructure__info-item-text">спа</div>
+                    <div class="infrastructure__info-item-img">
+                      <img src="./img/infrastructure/items/3.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="infrastructure__info-item">
+                    <div class="infrastructure__info-item-text">детская комната</div>
+                    <div class="infrastructure__info-item-img">
+                      <img src="./img/infrastructure/items/4.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="infrastructure__info-item">
+                    <div class="infrastructure__info-item-text">подземная парковка на 4 этажа</div>
+                    <div class="infrastructure__info-item-img">
+                      <img src="./img/infrastructure/items/5.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="infrastructure__info-item">
+                    <div class="infrastructure__info-item-text">супермаркет</div>
+                    <div class="infrastructure__info-item-img">
+                      <img src="./img/infrastructure/items/6.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="infrastructure__info-item">
+                    <div class="infrastructure__info-item-text">аптека</div>
+                    <div class="infrastructure__info-item-img">
+                      <img src="./img/infrastructure/items/7.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="infrastructure__info-item">
+                    <div class="infrastructure__info-item-text">галереи магазинов</div>
+                    <div class="infrastructure__info-item-img">
+                      <img src="./img/infrastructure/items/8.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="infrastructure__imgs">
+              <div class="infrastructure__img-item infrastructure__content-item">
+                <img src="./img/infrastructure/imgs/2.png" alt="" />
+              </div>
+              <div class="infrastructure__img-item infrastructure__content-item">
+                <img src="./img/infrastructure/imgs/3.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="environment" id="environment">
+      <div class="container">
+        <div class="environment__wrapper">
+          <div class="environment__title title">Потрясающие виды на Тбилиси</div>
+          <div class="environment__info">
+            <div class="environment__info-text environment__info--bg environment__info--brad">
+              <p>Идеальное расположение и близость важных локаций</p>
+              <p>
+                Все, чем может заинтересовать один из лучших городов мира, располагается в 5 минутах
+                от «Asgard Towers»
+              </p>
+            </div>
+            <div class="environment__info-img environment__info--brad">
+              <img src="./img/environment/info/img.png" alt="" />
+            </div>
+            <div class="environment__info-list environment__info--bg environment__info--brad">
+              <div class="environment__info-list-i">
+                Пешие прогулки по набережной до любой достопримечательности в центре города
+              </div>
+              <div class="environment__info-list-i">Речные трамвайчики прямо перед домом</div>
+              <div class="environment__info-list-i">
+                Рядом сквер с фонтанами, рестораном и прогулочной зоной
+              </div>
+              <div class="environment__info-list-i">
+                По соседству лучшие парки города — Киквидзе, Муштаиди, а также Динамо-Арена
+              </div>
+              <div class="environment__info-list-i">
+                В шаговой доступности станция метро, рынок, автовокзал, центр клиник
+              </div>
+              <div class="environment__info-list-i">
+                Рядом генпрокуратура и суд, а через дорогу Bank of Georgia
+              </div>
+              <div class="environment__info-list-i">
+                Выход на две центральные магистрали — проспект Церетели и набережную Бараташвили
+              </div>
+            </div>
+            <div class="environment__info-map environment__info--brad">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.2278235329463!2d44.87357249999999!3d41.7156025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4044127fb7627d75%3A0x1fba3a54ea818039!2sHotels%20%26%20Preference%20Hualing%20Tbilisi!5e0!3m2!1sru!2sua!4v1706984621001!5m2!1sru!2sua"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+          <div class="environment__imgs">
+            <div class="environment__img"><img src="./img/environment/imgs/1.png" alt="" /></div>
+            <div class="environment__img"><img src="./img/environment/imgs/2.png" alt="" /></div>
+            <div class="environment__img"><img src="./img/environment/imgs/3.png" alt="" /></div>
+            <div class="environment__img"><img src="./img/environment/imgs/4.png" alt="" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="interests">
+      <div class="container">
+        <div class="interests__wrapper">
+          <div class="interests__title title">Чем интересна Грузия?</div>
+          <div class="interests__content">
+            <div class="interests__items">
+              <div class="interests__item">
+                <div class="interests__item-img">
+                  <img src="./img/interests/icons/1.svg" alt="" />
+                </div>
+                <div class="interests__item-text">Одна из самых доступных стран для переезда</div>
+              </div>
+              <div class="interests__item">
+                <div class="interests__item-img">
+                  <img src="./img/interests/icons/2.svg" alt="" />
+                </div>
+                <div class="interests__item-text">
+                  Удобное авиасообщение, плюс строительство нового международного аэропорта в
+                  Тбилиси
+                </div>
+              </div>
+              <div class="interests__item">
+                <div class="interests__item-img">
+                  <img src="./img/interests/icons/3.svg" alt="" />
+                </div>
+                <div class="interests__item-text">
+                  Нет языкового барьера, а о грузинском гостеприимстве ходят легенды
+                </div>
+              </div>
+              <div class="interests__item">
+                <div class="interests__item-img">
+                  <img src="./img/interests/icons/4.svg" alt="" />
+                </div>
+                <div class="interests__item-text">
+                  Достойное образование: престижные вузы, филиалы международных школ и академий
+                </div>
+              </div>
+              <div class="interests__item">
+                <div class="interests__item-img">
+                  <img src="./img/interests/icons/5.svg" alt="" />
+                </div>
+                <div class="interests__item-text">
+                  Хорошие перспективы для бизнеса, инвестиций, карьерного роста
+                </div>
+              </div>
+              <div class="interests__item">
+                <div class="interests__item-img">
+                  <img src="./img/interests/icons/6.svg" alt="" />
+                </div>
+                <div class="interests__item-text">Прекрасный климат, экология, природа</div>
+              </div>
+              <div class="interests__item">
+                <div class="interests__item-img">
+                  <img src="./img/interests/icons/7.svg" alt="" />
+                </div>
+                <div class="interests__item-text">
+                  Аутентичная кухня, изобилие свежих овощей и фруктов
+                </div>
+              </div>
+              <div class="interests__item">
+                <div class="interests__item-img">
+                  <img src="./img/interests/icons/8.svg" alt="" />
+                </div>
+                <div class="interests__item-text">
+                  Грузия — родина вина! Факт, признанный Юнеско
+                </div>
+              </div>
+            </div>
+            <div class="interests__img"><img src="./img/interests/img.png" alt="" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="market">
+      <div class="container">
+        <div class="market__wrapper">
+          <div class="market__title title">Рынок недвижимости в Грузии</div>
+          <div class="market__items">
+            <div class="market__item">
+              <div class="market__item-title">Приток туристов</div>
+              <div class="market__item-text">2024</div>
+              <div class="market__item-info">11.000.000</div>
+            </div>
+            <div class="market__item">
+              <div class="market__item-title">Удорожание жилья</div>
+              <div class="market__item-text">в год</div>
+              <div class="market__item-info">18-20%</div>
+            </div>
+            <div class="market__item">
+              <div class="market__item-title">Квартиры в Грузии</div>
+              <div class="market__item-text">подорожали не на 10</div>
+              <div class="market__item-info">на 20%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="block-1">
+      <section class="reasons">
+        <div class="container">
+          <div class="reasons__wrapper">
+            <div class="reasons__title title">5 причин инвестировать в недвижимость Грузии</div>
+            <div class="reasons__items">
+              <div class="reasons__item">
+                <div class="reasons__item-title">
+                  <div class="reasons__item-title-num">1</div>
+                  <div class="reasons__item-title-text">Минимум бюрократии</div>
+                </div>
+                <div class="reasons__item-list">
+                  <div class="reasons__item-list-elem">
+                    Одна из лучших налоговых систем в Европе
+                  </div>
+                  <div class="reasons__item-list-elem">Развитая цифровизация</div>
+                  <div class="reasons__item-list-elem">
+                    Простые и удобные условия для ведения бизнеса
+                  </div>
+                  <div class="reasons__item-list-elem">
+                    Открытие банковского счета - моментально
+                  </div>
+                  <div class="reasons__item-list-elem">Открытие ИП - 2-3 дня</div>
+                  <div class="reasons__item-list-elem">Возможность вести дела удаленно</div>
+                </div>
+              </div>
+              <div class="reasons__item">
+                <div class="reasons__item-title">
+                  <div class="reasons__item-title-num">2</div>
+                  <div class="reasons__item-title-text">Стремительное развитие инфраструктуры</div>
+                </div>
+                <div class="reasons__item-text">
+                  <p>В Грузии проходит масштабная программа по развитию городов и курортов.</p>
+                  <p>
+                    Строительство нового международного аэропорта в Тбилиси, порта Анаклия,
+                    автомагистралей и микрорайонов говорит о экономическом росте страны
+                  </p>
+                </div>
+              </div>
+              <div class="reasons__item">
+                <div class="reasons__item-title">
+                  <div class="reasons__item-title-num">3</div>
+                  <div class="reasons__item-title-text">Низкая конкуренция</div>
+                </div>
+                <div class="reasons__item-text">
+                  <p>
+                    В премиальном сегменте есть острая нехватка жилья В районах старого города
+                    приятно гулять, но жить с традиционным грузинским колоритом готовы не многие.
+                  </p>
+                  <p>
+                    Поэтому в Тбилиси очень оперативно арендуют и покупают квартиры с дизайнерским
+                    ремонтом в новых современных домах
+                  </p>
+                </div>
+              </div>
+              <div class="reasons__item">
+                <div class="reasons__item-title">
+                  <div class="reasons__item-title-num">4</div>
+                  <div class="reasons__item-title-text">
+                    Большой поток туристов, релокантов, компаний
+                  </div>
+                </div>
+                <div class="reasons__item-text">
+                  <p>
+                    По всем известным причинам растет не только число туристов, но и эмигрантов,
+                    предпринимателей, иностранных компаний и их сотрудников.
+                  </p>
+                  <p>Всем им нужно где-то жить, временно или постоянно</p>
+                </div>
+              </div>
+              <div class="reasons__item">
+                <div class="reasons__item-title">
+                  <div class="reasons__item-title-num">5</div>
+                  <div class="reasons__item-title-text">Рост рынка недвижимости</div>
+                </div>
+                <div class="reasons__item-text">
+                  <p>
+                    Спрос на недвижимость в Грузии остается на высоком уровне. И не только из-за
+                    волны эмиграции, но и тенденции к переселению местных жителей из сельской
+                    местности в города
+                  </p>
+                  <p>
+                    За последние 2 года цены на недвижимость в Грузии значительно выросли и
+                    продолжают расти
+                  </p>
+                </div>
+              </div>
+              <div class="reasons__img"><img src="./img/reasons/img.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="company">
+        <div class="container">
+          <div class="company__wrapper">
+            <div class="company__title title">О компании</div>
+            <div class="company__items">
+              <div class="company__about company__item">
+                <div class="company__about-title">ASGARD</div>
+                <div class="company__about-text">
+                  ЗАНИМАЕТСЯ СОЗДАНИЕМ И СОПРОВОЖДЕНИЕМ СТРОИТЕЛЬНЫХ ПРОЕКТОВ ПО ВСЕМУ МИРУ
+                </div>
+              </div>
+              <div class="company__img company__item"><img src="./img/company/1.png" alt="" /></div>
+              <div class="company__info">
+                <p>
+                  На сегодняшний день компания развивает и реализует строительные проекты в 4
+                  странах: Турция, Грузия, ОАЭ, Гана и продолжает осваивать новые земли.
+                </p>
+                <p>
+                  Asgard Estate ответственно подходит к выбору рынка, на котором будут представлены
+                  объекты компании. Мы работаем только с проверенными партнерами и застройщиками и
+                  нацелены на высокое качество построенных объектов недвижимости.
+                </p>
+              </div>
+              <div class="company__img company__item"><img src="./img/company/2.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects">
+        <div class="container">
+          <div class="projects__wrapper">
+            <div class="projects__title title">Проекты</div>
+            <div class="projects__content">
+              <div class="projects__item">
+                <div class="projects__item-title">
+                  <p>Турция</p>
+                  <p>eco premium</p>
+                </div>
+                <div class="projects__item-slider">
+                  <div class="swiper-wrapper">
+                    <div class="projects__item-slider-item swiper-slide">
+                      <img src="./img/projects/items/1.png" alt="" />
+                    </div>
+                    <div class="projects__item-slider-item swiper-slide">
+                      <img src="./img/projects/items/2.png" alt="" />
+                    </div>
+                    <div class="projects__item-slider-item swiper-slide">
+                      <img src="./img/projects/items/3.png" alt="" />
+                    </div>
+                    <div class="projects__item-slider-item swiper-slide">
+                      <img src="./img/projects/items/4.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="projects__item">
+                <div class="projects__item-title">
+                  <p>грузия</p>
+                  <p>lisi premium</p>
+                </div>
+                <div class="projects__item-slider">
+                  <div class="swiper-wrapper">
+                    <div class="projects__item-slider-item swiper-slide">
+                      <img src="./img/projects/items/5.png" alt="" />
+                    </div>
+                    <div class="projects__item-slider-item swiper-slide">
+                      <img src="./img/projects/items/6.png" alt="" />
+                    </div>
+                    <div class="projects__item-slider-item swiper-slide">
+                      <img src="./img/projects/items/7.png" alt="" />
+                    </div>
+                    <div class="projects__item-slider-item swiper-slide">
+                      <img src="./img/projects/items/8.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="projects__item">
+                <div class="projects__item-title">
+                  <p>оаэ</p>
+                  <p>coming soon</p>
+                </div>
+                <div class="projects__item-img">
+                  <img src="./img/projects/items/9.png" alt="" />
+                  <div class="projects__item-img-text">Coming soon!</div>
+                </div>
+              </div>
+              <div class="projects__item">
+                <div class="projects__item-title">
+                  <p>гана</p>
+                  <p>coming soon</p>
+                </div>
+                <div class="projects__item-img">
+                  <img src="./img/projects/items/10.png" alt="" />
+                  <div class="projects__item-img-text">Coming soon!</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="developer">
+      <div class="container">
+        <div class="developer__wrapper">
+          <div class="developer__title title">Застройщик</div>
+          <div class="developer__content">
+            <div class="developer__info">
+              <div class="developer__info-text">
+                СМС является пионером в области управления строительства в Грузии. За десителетнюю
+                историю она стала крупнейшей компанией на рынке.
+              </div>
+              <div class="developer__info-items">
+                <div class="developer__info-item">
+                  <div class="developer__info-item-text">Завершенных проектов в портфеле</div>
+                  <div class="developer__info-item-num">77</div>
+                </div>
+                <div class="developer__info-item">
+                  <div class="developer__info-item-text">Текущих проектов в портфеле</div>
+                  <div class="developer__info-item-num">18</div>
+                </div>
+                <div class="developer__info-item">
+                  <div class="developer__info-item-text">Общий обьем инвестиций превышает</div>
+                  <div class="developer__info-item-num">2&nbsp;млрд&nbsp;$</div>
+                </div>
+              </div>
+            </div>
+            <div class="developer__logos">
+              <div class="developer__logos-block">
+                <div class="developer__logo"><img src="./img/developer/logos/1.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/2.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/3.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/4.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/5.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/6.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/7.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/8.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/9.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/10.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/11.svg" alt="" /></div>
+                <div class="developer__logo"><img src="./img/developer/logos/12.svg" alt="" /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="interior">
+      <div class="container">
+        <div class="interior__wrapper">
+          <div class="interior__title title">Интерьер</div>
+          <div class="interior__info">
+            <div class="interior__info-title">
+              Все апартаменты предлагаются с высококлассной финишной отделкой
+            </div>
+            <div class="interior__info-items">
+              <div class="interior__info-item">
+                Чистовые потолки от 3 метров — максимум света и пространства.
+              </div>
+              <div class="interior__info-item">
+                Панорамное остекление с возможностью открывания окон.
+              </div>
+              <div class="interior__info-item">Система вентиляции и кондиционирования воздуха.</div>
+            </div>
+          </div>
+          <div class="interior__imgs">
+            <div class="interior__img"><img src="./img/interior/imgs/1.png" alt="" /></div>
+            <div class="interior__img"><img src="./img/interior/imgs/2.png" alt="" /></div>
+            <div class="interior__img"><img src="./img/interior/imgs/3.png" alt="" /></div>
+            <div class="interior__img"><img src="./img/interior/imgs/4.png" alt="" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="investor">
+      <div class="container">
+        <div class="investor__wrapper">
+          <div class="investor__title title">Пассивный инвестор</div>
+          <div class="investor__content">
+            <div class="investor__items">
+              <div class="investor__item">
+                <div class="investor__decor"><img src="./img/investor/decor.png" alt="" /></div>
+                <p>Примерьте на себя роль пассивного инвестора</p>
+                <p>
+                  Передайте квартиру в доверительное управление нашей компании<span>
+                    и получаете свой % на карту ежемесячно</span
+                  >
+                </p>
+              </div>
+              <div class="investor__item investor__item--align">
+                <p>
+                  *При 100% оплате квартиры мы ГАРАНТИРУЕМ <span>доход 8% годовых</span> от аренды
+                  под нашим управлением на протяжении 3 лет!
+                </p>
+              </div>
+            </div>
+            <div class="investor__desc">
+              <div class="investor__info-title">Плюсы доверительного управления имуществом</div>
+
+              <div class="investor__infos info">
+                <div class="info__item">
+                  <p class="investor__info">
+                    Экономия времени. Собственнику не приходится заниматься поиском жильцов,
+                    показывать квартиры, заключать договор, заботиться об оплате коммунальных услуг.
+                  </p>
+                </div>
+                <div class="info__item">
+                  <p class="investor__info">
+                    Возникающие проблемы решает менеджер. Если соседи зальют жильцов сверху, они
+                    будут звонить именно ему, а не собственнику.
+                  </p>
+                </div>
+                <div class="info__item">
+                  <p class="investor__info">
+                    Не нужно тратиться на юридические услуги. Все договоры с жильцами заключает
+                    менеджер.
+                  </p>
+                </div>
+                <div class="info__item">
+                  <p class="investor__info">
+                    Износ помещения может быть не вашей заботой. Управляющий принимает квартиру от
+                    жильцов и принимает решение о ее обновлении, ремонте и цене на ее аренду.
+                    Клининг после жильцов тоже может входить в комплекс услуг.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proposal">
+      <div class="container">
+        <div class="proposal__wrapper">
+          <div class="proposal__title title">
+            Исключительное предложение для клиентов Asgard Estate
+          </div>
+          <div class="proposal__items">
+            <div class="proposal__item">
+              <div class="proposal__item-title">
+                Акционное предложение для клиентов Asgard Estate
+              </div>
+              <div class="proposal__item-elems">
+                <div class="proposal__item-elem">
+                  <div class="proposal__item-elem-title">Стоимость на этапе строительства:</div>
+                  <div class="proposal__item-elem-text"><span>1350 $ за 1 кв.м.</span></div>
+                </div>
+                <div class="proposal__item-elem">
+                  <div class="proposal__item-elem-title">Ориентировочная стоимость продажи:</div>
+                  <div class="proposal__item-elem-text"><span>от 2500 $ за 1 кв.м.</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="proposal__item">
+              <div class="proposal__item-title">Предполагаемая доходность</div>
+              <div class="proposal__item-elems">
+                <div class="proposal__item-elem">
+                  <div class="proposal__item-elem-text"><span>57% за цикл</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="proposal__item">
+              <div class="proposal__item-title">Ограниченное предложение</div>
+              <div class="proposal__item-elems">
+                <div class="proposal__item-elem">
+                  <div class="proposal__item-elem-text">
+                    Ведь только <span>1&nbsp;000&nbsp;кв.м.</span> в ЖК Asgard Towers доступны для
+                    наших клиентов
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="conditions">
+      <div class="container">
+        <div class="conditions__wrapper">
+          <div class="conditions__title title">Условия покупки</div>
+          <div class="conditions__content">
+            <div class="conditions__steps">
+              <div class="conditions__steps-title">
+                Стать владельцем просторной и уютной квартиры в Asgard Towers просто
+              </div>
+              <div class="conditions__steps-items">
+                <div class="conditions__steps-item">
+                  <div class="conditions__steps-item-title">Шаг 1.</div>
+                  <div class="conditions__steps-item-text">
+                    Оставьте заявку и наш менеджер свяжется с вами.
+                  </div>
+                </div>
+                <div class="conditions__steps-item">
+                  <div class="conditions__steps-item-title">Шаг 2.</div>
+                  <div class="conditions__steps-item-text">Выберите квартиру.</div>
+                </div>
+                <div class="conditions__steps-item">
+                  <div class="conditions__steps-item-title">Шаг 3.</div>
+                  <div class="conditions__steps-item-text">
+                    Подпишите договор и произведите оплату.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="conditions__btn btn modal__btn-active" data-modal-src="modal">
+              Оставить заявку
+            </button>
+
+            <div class="conditions__steps">
+              <div class="conditions__steps-title conditions__steps-title--mrg">
+                Комфортные условия для каждого клиента
+              </div>
+              <div class="conditions__steps-text">
+                Мы заключили партнерство с TBC Bank, и у вас есть возможность оформить ипотеку* под
+                наш проект на выгодных условиях:
+              </div>
+
+              <div class="interior__info-items interior__info-items--tmpl-2">
+                <div class="interior__info-item">с минимальным пакетом документов</div>
+                <div class="interior__info-item">
+                  с возможностью заключения договора в онлайн формате
+                </div>
+              </div>
+            </div>
+
+            <div class="conditions__text">
+              *Процентные ставки по ипотечным кредитам рассматриваются индивидуально и зависят от
+              первоначального взноса, срока выплат и других обстоятельств.
+            </div>
+
+            <div class="conditions__items">
+              <div class="conditions__item">
+                <div class="conditions__item-img">
+                  <img src="./img/conditions/items/1.png" alt="" />
+                </div>
+                <div class="conditions__item-text">Беспроцентная рассрочка до 12 месяцев</div>
+              </div>
+              <div class="conditions__item">
+                <div class="conditions__item-img">
+                  <img src="./img/conditions/items/2.png" alt="" />
+                </div>
+                <div class="conditions__item-text">Ипотека на срок до 10 лет</div>
+              </div>
+              <div class="conditions__item">
+                <div class="conditions__item-img">
+                  <img src="./img/conditions/items/3.png" alt="" />
+                </div>
+                <div class="conditions__item-text">Первоначальный взнос от 30%</div>
+              </div>
+              <div class="conditions__item">
+                <div class="conditions__item-img">
+                  <img src="./img/conditions/items/4.png" alt="" />
+                </div>
+                <div class="conditions__item-text">Безналичный расчет в любой валюте</div>
+              </div>
+              <div class="conditions__item">
+                <div class="conditions__item-img">
+                  <img src="./img/conditions/items/5.png" alt="" />
+                </div>
+                <div class="conditions__item-text">Возможна оплата в USDT</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="footer"></footer>
+
+    <div class="modal__wrapper" data-modal-window="modal">
+      <div class="modal__content">
+        <div class="modal__btn-close">
+          <span class="icon-close"></span>
+        </div>
+        <form id="form" class="form form-send" action="/" method="post">
+          <div class="form__title">
+            Чтобы получить косультацию менеджера, пожалуйста, внесите свои данные в полях ниже
+          </div>
+          <div class="form__inputs">
+            <div class="form__input-block">
+              <input type="hidden" value="" name="country-code" id="country-code" />
+              <input
+                type="text"
+                required
+                placeholder="Имя"
+                name="name"
+                value=""
+                class="form__input val val-name"
+              />
+              <div class="form__input-text">Не правильно введено Имя</div>
+            </div>
+            <div class="form__input-block">
+              <input
+                type="text"
+                required
+                placeholder="Фамилия"
+                name="surname"
+                value=""
+                class="form__input val val-name"
+              />
+              <div class="form__input-text">Не правильно введена Фамилия</div>
+            </div>
+            <div class="form__input-block">
+              <input
+                type="tel"
+                required
+                placeholder=""
+                name="phone"
+                value=""
+                class="form__input phone"
+                id="phone"
+              />
+              <div class="form__input-text error-msg" id="error-msg"></div>
+            </div>
+          </div>
+
+          <div class="form__checkbox-block">
+            <input type="checkbox" id="agree" name="agree" class="form__input-checkbox" />
+            <label class="form__input-checkbox-label" for="agree"></label>
+            <p>
+              Я даю свое согласие на обработку указанных мной данных компаниями ASGARD ESTATE - FZCO
+              (№ - 24755, Дубай, ОАЭ) и ECO INVESTMENTS (№ 3240954085, Анталья, Турция) в целях
+              предоставления мне консультационных услуг и информации о покупке недвижимости на срок
+              3 месяца.
+            </p>
+          </div>
+
+          <div class="form__btn"><button class="btn">Отправить</button></div>
+
+          <div class="form__text">
+            <span class="icon-mail"></span>
+            <p>
+              Для отзыва согласия обращайтесь по электронной почте
+              <a href="mailto:legal@asgard.estate">legal@asgard.estate</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/intlTelInput.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/form-validation.js"></script>
+    <script src="./js/resize.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

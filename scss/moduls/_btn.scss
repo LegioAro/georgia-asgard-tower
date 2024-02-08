@@ -1,0 +1,21 @@
+.btn {
+  width: 100%;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    -34.67deg,
+    rgb(190, 141, 52) -14.015%,
+    rgb(254, 227, 178) 213.612%
+  );
+  border: 0;
+  color: rgb(255, 255, 255);
+  font-family: var(--font-text);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 120%;
+  text-align: center;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

@@ -1,0 +1,31 @@
+html[lang='en'] {
+  .investor__decor {
+    display: none;
+  }
+}
+
+body {
+  background-color: #151515;
+  color: #fff;
+  font-family: var(--font-text);
+  font-weight: normal;
+  position: relative;
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  &--big {
+    max-width: 1800px;
+  }
+}
+
+.--select {
+  color: #be8d34;
+}
