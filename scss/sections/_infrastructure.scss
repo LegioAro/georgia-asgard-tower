@@ -188,6 +188,9 @@
     &__img {
       height: 200px;
     }
+    &__info-items {
+      grid-row-gap: 20px;
+    }
     &__info-item-text {
       width: calc(100% - 30px);
       padding: 20px 110px 20px 20px;
