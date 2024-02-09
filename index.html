@@ -61,7 +61,7 @@
               Связаться с менеджером
             </button>
           </div>
-          <form class="cover__form form-send" action="/" method="post">
+          <!-- <form class="cover__form form-send" action="/" method="post">
             <div class="cover__form-info">
               <div class="cover__form-info-img"><img src="./img/cover/form/img.png" alt="" /></div>
               <div class="cover__form-info-text">
@@ -70,7 +70,6 @@
               </div>
             </div>
             <div class="cover__form-elem">
-              <!-- <input type="text" name="" required value="" class="cover__form-input" /> -->
               <div class="form__input-block">
                 <input
                   type="tel"
@@ -96,9 +95,9 @@
                 <label class="form__input-checkbox-label" for="agree-2"></label>
                 <p>Согласен</p>
               </div>
-              <button class="cover__form-btn btn">Скачать презентацию</button>
+              <button class="cover__form-btn btn form-download">Скачать презентацию</button>
             </div>
-          </form>
+          </form> -->
         </div>
       </div>
     </section>
@@ -131,7 +130,7 @@
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/-CTlz5PJRZs?si=JORlPaKn7NRZqCxt&amp;controls=0"
+                src="https://www.youtube.com/embed/ChWFGTzC5zo?si=JORlPaKn7NRZqCxt&amp;controls=0"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -275,7 +274,7 @@
             </div>
             <div class="environment__info-map environment__info--brad">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.2278235329463!2d44.87357249999999!3d41.7156025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4044127fb7627d75%3A0x1fba3a54ea818039!2sHotels%20%26%20Preference%20Hualing%20Tbilisi!5e0!3m2!1sru!2sua!4v1706984621001!5m2!1sru!2sua"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.033124147452!2d44.771858300000005!3d41.741378399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404473007db825d1%3A0xa7d3f98e3ea87113!2sAsgard%20Towers!5e0!3m2!1sru!2sua!4v1707502659909!5m2!1sru!2sua"
                 width="100%"
                 height="100%"
                 style="border: 0"
@@ -501,10 +500,21 @@
               <div class="company__img company__item"><img src="./img/company/1.png" alt="" /></div>
               <div class="company__info">
                 <p>
-                  Девелоперская компания ASGARD GEORGIA LLC и ее дочерние компании City development
-                  LLC и Kempinski LLC осуществляют строительство на территории Грузии.
+                  ASGARD GEORGIA LLC, вместе со своими дочерними компаниями City Development LLC и
+                  Kempinski LLC, являются застройщиками в Грузии, специализирующимися на
+                  строительных проектах.
                 </p>
-                <span> есть возможности купить квартиру в ипотеку</span>
+                <p>Наши ценности:</p>
+                <div class="environment__info-list-i">
+                  Соблюдение сроков и высокое качество строительства
+                </div>
+                <div class="environment__info-list-i">
+                  Гибкая система оплаты и помощь в получении ипотеки
+                </div>
+                <div class="environment__info-list-i">Оптимизированный строительный процесс</div>
+                <div class="environment__info-list-i">
+                  Партнерство с лучшими дизайнерами и архитекторами по всему миру.
+                </div>
               </div>
               <div class="company__img company__item"><img src="./img/company/2.png" alt="" /></div>
             </div>
@@ -906,8 +916,8 @@
                 Комфортные условия для каждого клиента
               </div>
               <div class="conditions__steps-text">
-                Мы заключили партнерство с TBC Bank, и у вас есть возможность оформить ипотеку* под
-                наш проект на выгодных условиях:
+                В жилом комплексе Asgard Towers вы можете приобрести апартаменты в ипотеку. Чтобы
+                узнать все детали и условия от банка, пожалуйста, свяжитесь с нашим менеджером.
               </div>
 
               <div class="interior__info-items interior__info-items--tmpl-2">
@@ -918,10 +928,10 @@
               </div>
             </div>
 
-            <div class="conditions__text">
+            <!-- <div class="conditions__text">
               *Процентные ставки по ипотечным кредитам рассматриваются индивидуально и зависят от
               первоначального взноса, срока выплат и других обстоятельств.
-            </div>
+            </div> -->
 
             <div class="conditions__items">
               <div class="conditions__item">
@@ -965,17 +975,14 @@
         <div class="footer__wrapper">
           <div class="footer__info">
             <div class="footer__info-item"><p>Identification Number: 405631473</p></div>
-            <a
-              href="mailto:info@asgardtowers.com"
-              target="_blank"
-              class="footer__info-item footer__info-link"
+            <a href="mailto:info@asgardtowers.com" class="footer__info-item footer__info-link"
               ><img src="./img/icons/mail.svg" alt="" />
               <p>info@asgardtowers.com</p></a
             >
             <div class="footer__info-item">
               <p>Georgia, Tbilisi, Saburtalo district, Victor Nozadze St., N 15</p>
             </div>
-            <a href="tel:+995522222555" target="_blank" class="footer__info-item footer__info-link"
+            <a href="tel:+995522222555" class="footer__info-item footer__info-link"
               ><img src="./img/icons/phone.svg" alt="" />
               <p>+995 522 222 555</p></a
             >

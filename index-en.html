@@ -62,7 +62,7 @@
               Contact a manager
             </button>
           </div>
-          <form class="cover__form form-send" action="/" method="post">
+          <!-- <form class="cover__form form-send" action="/" method="post">
             <div class="cover__form-info">
               <div class="cover__form-info-img"><img src="./img/cover/form/img.png" alt="" /></div>
               <div class="cover__form-info-text">
@@ -71,7 +71,6 @@
               </div>
             </div>
             <div class="cover__form-elem">
-              <!-- <input type="text" name="" required value="" class="cover__form-input" /> -->
               <div class="form__input-block">
                 <input
                   type="tel"
@@ -80,13 +79,27 @@
                   name="phone"
                   value=""
                   class="form__input phone"
-                  id="phone"
                 />
                 <div class="form__input-text error-msg" id="error-msg"></div>
               </div>
-              <button class="cover__form-btn btn">Download a presentation</button>
+              <div class="cover__form-text">
+                By submitting your contact information, you consent to their processing in
+                accordance with the legislation of Georgia for the purpose of contacting you
+                regarding the purchase of real estate.
+              </div>
+              <div class="form__checkbox-block form__checkbox-block--tmpl-2">
+                <input
+                  type="checkbox"
+                  id="agree-2"
+                  name="agree"
+                  class="form__input-checkbox form-agree"
+                />
+                <label class="form__input-checkbox-label" for="agree-2"></label>
+                <p>Agree</p>
+              </div>
+              <button class="cover__form-btn btn form-download">Download presentation</button>
             </div>
-          </form>
+          </form> -->
         </div>
       </div>
     </section>
@@ -119,7 +132,7 @@
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/-CTlz5PJRZs?si=JORlPaKn7NRZqCxt&amp;controls=0"
+                src="https://www.youtube.com/embed/ChWFGTzC5zo?si=JORlPaKn7NRZqCxt&amp;controls=0"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -262,7 +275,7 @@
             </div>
             <div class="environment__info-map environment__info--brad">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.2278235329463!2d44.87357249999999!3d41.7156025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4044127fb7627d75%3A0x1fba3a54ea818039!2sHotels%20%26%20Preference%20Hualing%20Tbilisi!5e0!3m2!1sru!2sua!4v1706984621001!5m2!1sru!2sua"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.033124147452!2d44.771858300000005!3d41.741378399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404473007db825d1%3A0xa7d3f98e3ea87113!2sAsgard%20Towers!5e0!3m2!1sru!2sua!4v1707502659909!5m2!1sru!2sua"
                 width="100%"
                 height="100%"
                 style="border: 0"
@@ -493,15 +506,21 @@
               <div class="company__img company__item"><img src="./img/company/1.png" alt="" /></div>
               <div class="company__info">
                 <p>
-                  Today the company is developing and implementing construction projects in 4
-                  countries: Turkey, Georgia, UAE, Ghana and continues to develop new lands.
+                  ASGARD GEORGIA LLC, together with its subsidiaries City Development LLC and
+                  Kempinski LLC, are real estate developers in Georgia specializing in construction
+                  projects.
                 </p>
-                <p>
-                  Asgard Estate takes a responsible approach to choosing the market in which the
-                  company's properties will be presented. We work only with trusted partners and
-                  developers and are focused on the high quality of constructed real estate
-                  properties.
-                </p>
+                <p>Наши ценности:</p>
+                <div class="environment__info-list-i">
+                  Meeting deadlines and high quality construction
+                </div>
+                <div class="environment__info-list-i">
+                  Flexible payment system and assistance in obtaining a mortgage
+                </div>
+                <div class="environment__info-list-i">Optimized construction process</div>
+                <div class="environment__info-list-i">
+                  Partnership with the best designers and architects around the world.
+                </div>
               </div>
               <div class="company__img company__item"><img src="./img/company/2.png" alt="" /></div>
             </div>
@@ -792,8 +811,9 @@
                 COMFORTABLE CONDITIONS FOR EACH CLIENT
               </div>
               <div class="conditions__steps-text">
-                We have sealed the partnership with TBC Bank and you have the opportunity to get a
-                mortgage for our project on favorable terms:
+                In the Asgard Towers residential complex you can purchase apartments with a
+                mortgage. To find out all the details and conditions from the bank, please contact
+                our manager.
               </div>
 
               <div class="interior__info-items interior__info-items--tmpl-2">
@@ -804,10 +824,10 @@
               </div>
             </div>
 
-            <div class="conditions__text">
+            <!-- <div class="conditions__text">
               *Interest rates on mortgage loans are considered individually and depend on the down
               payment, payment term and other circumstances.
-            </div>
+            </div> -->
 
             <div class="conditions__items">
               <div class="conditions__item">
@@ -851,17 +871,14 @@
         <div class="footer__wrapper">
           <div class="footer__info">
             <div class="footer__info-item"><p>Identification Number: 405631473</p></div>
-            <a
-              href="mailto:info@asgardtowers.com"
-              target="_blank"
-              class="footer__info-item footer__info-link"
+            <a href="mailto:info@asgardtowers.com" class="footer__info-item footer__info-link"
               ><img src="./img/icons/mail.svg" alt="" />
               <p>info@asgardtowers.com</p></a
             >
             <div class="footer__info-item">
               <p>Georgia, Tbilisi, Saburtalo district, Victor Nozadze St., N 15</p>
             </div>
-            <a href="tel:+995522222555" target="_blank" class="footer__info-item footer__info-link"
+            <a href="tel:+995522222555" class="footer__info-item footer__info-link"
               ><img src="./img/icons/phone.svg" alt="" />
               <p>+995 522 222 555</p></a
             >
@@ -919,7 +936,12 @@
           </div>
 
           <div class="form__checkbox-block">
-            <input type="checkbox" id="agree" name="agree" class="form__input-checkbox" />
+            <input
+              type="checkbox"
+              id="agree"
+              name="agree"
+              class="form__input-checkbox form-agree"
+            />
             <label class="form__input-checkbox-label" for="agree"></label>
             <p>
               I give my consent for the processing of the data I have provided by ASGARD ESTATE -

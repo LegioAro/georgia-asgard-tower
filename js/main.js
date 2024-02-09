@@ -100,6 +100,7 @@ const forms = document.querySelectorAll('.form-send');
 
 forms.forEach((form) => {
   const agreeCheckbox = form.querySelector('.form-agree');
+  const downloadFile = form.querySelector('.form-download');
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -123,7 +124,15 @@ forms.forEach((form) => {
     }
 
     if (result) {
+      if (downloadFile) {
+        const download = document.createElement('a');
+        download.setAttribute('href', './documents/styles.css');
+        download.setAttribute('download', 'styles.css');
+        download.click();
+      }
+
       form.submit();
+      form.reset();
     }
   });
 });
