@@ -12,6 +12,7 @@
 
   &__content {
     margin-right: 20px;
+    padding-bottom: 103px;
   }
 
   &__title {
@@ -57,7 +58,8 @@
 
   &__form {
     display: flex;
-    padding: 41px 35px;
+    align-items: flex-end;
+    padding: 35px;
     border-radius: 5px;
     box-shadow: 0px 21px 43px 0px rgb(18, 16, 16);
     backdrop-filter: blur(50px);
@@ -66,18 +68,20 @@
       rgba(32, 28, 32, 0) -54.918%,
       rgba(32, 28, 32, 0.75) 100%
     );
+    width: 100%;
+    max-width: 738px;
   }
 
   &__form-info {
-    margin-right: 40px;
+    margin-right: 47px;
+    max-width: 340px;
   }
 
   &__form-info-img {
     display: flex;
     width: 100%;
-    max-width: 214px;
-    margin-bottom: 17px;
-    margin: -136px 48px 17px auto;
+    max-width: 100%;
+    margin-bottom: 5px;
   }
 
   &__form-info-text {
@@ -114,7 +118,14 @@
     font-size: 18px;
     line-height: 120%;
     border: 0;
-    margin-bottom: 22px;
+    margin-bottom: 10px;
+  }
+
+  &__form-text {
+    color: rgba(239, 239, 239, 0.7);
+    font-size: 12px;
+    line-height: 120%;
+    margin-bottom: 10px;
   }
 
   &__form-btn {
@@ -129,8 +140,7 @@
       max-width: 500px;
     }
     &__form-info {
-      margin-right: 0;
-      margin-bottom: 30px;
+      margin: 0 auto 30px;
     }
 
     &__form-info-img {
@@ -193,6 +203,7 @@
       flex-direction: column;
       align-items: center;
       margin-bottom: 100px;
+      padding-bottom: 0;
     }
 
     &__form {
@@ -200,7 +211,7 @@
     }
 
     &__form-info-img {
-      max-width: 150px;
+      max-width: 300px;
       margin-top: -90px;
     }
   }

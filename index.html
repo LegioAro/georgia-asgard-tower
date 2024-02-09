@@ -82,6 +82,20 @@
                 />
                 <div class="form__input-text error-msg" id="error-msg"></div>
               </div>
+              <div class="cover__form-text">
+                Передавая свои контактные данные, Вы даете согласие на их обработку в соответствии с
+                законодательством Грузии в целях связи с Вами по вопросам приобретения недвижимости.
+              </div>
+              <div class="form__checkbox-block form__checkbox-block--tmpl-2">
+                <input
+                  type="checkbox"
+                  id="agree-2"
+                  name="agree"
+                  class="form__input-checkbox form-agree"
+                />
+                <label class="form__input-checkbox-label" for="agree-2"></label>
+                <p>Согласен</p>
+              </div>
               <button class="cover__form-btn btn">Скачать презентацию</button>
             </div>
           </form>
@@ -487,14 +501,10 @@
               <div class="company__img company__item"><img src="./img/company/1.png" alt="" /></div>
               <div class="company__info">
                 <p>
-                  На сегодняшний день компания развивает и реализует строительные проекты в 4
-                  странах: Турция, Грузия, ОАЭ, Гана и продолжает осваивать новые земли.
+                  Девелоперская компания ASGARD GEORGIA LLC и ее дочерние компании City development
+                  LLC и Kempinski LLC осуществляют строительство на территории Грузии.
                 </p>
-                <p>
-                  Asgard Estate ответственно подходит к выбору рынка, на котором будут представлены
-                  объекты компании. Мы работаем только с проверенными партнерами и застройщиками и
-                  нацелены на высокое качество построенных объектов недвижимости.
-                </p>
+                <span> есть возможности купить квартиру в ипотеку</span>
               </div>
               <div class="company__img company__item"><img src="./img/company/2.png" alt="" /></div>
             </div>
@@ -507,7 +517,7 @@
           <div class="projects__wrapper">
             <div class="projects__title title">Проекты</div>
             <div class="projects__content">
-              <div class="projects__item">
+              <!-- <div class="projects__item">
                 <div class="projects__item-title">
                   <p>Турция</p>
                   <p>eco premium</p>
@@ -528,7 +538,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
               <div class="projects__item">
                 <div class="projects__item-title">
@@ -552,7 +562,7 @@
                   </div>
                 </div>
               </div>
-              <div class="projects__item">
+              <!-- <div class="projects__item">
                 <div class="projects__item-title">
                   <p>оаэ</p>
                   <p>coming soon</p>
@@ -571,7 +581,7 @@
                   <img src="./img/projects/items/10.png" alt="" />
                   <div class="projects__item-img-text">Coming soon!</div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -603,7 +613,7 @@
                 </div>
               </div>
             </div>
-            <div class="developer__logos">
+            <!-- <div class="developer__logos">
               <div class="developer__logos-block">
                 <div class="developer__logo"><img src="./img/developer/logos/1.svg" alt="" /></div>
                 <div class="developer__logo"><img src="./img/developer/logos/2.svg" alt="" /></div>
@@ -618,7 +628,7 @@
                 <div class="developer__logo"><img src="./img/developer/logos/11.svg" alt="" /></div>
                 <div class="developer__logo"><img src="./img/developer/logos/12.svg" alt="" /></div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -950,7 +960,30 @@
       </div>
     </section>
 
-    <footer class="footer" id="footer"></footer>
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__info">
+            <div class="footer__info-item"><p>Identification Number: 405631473</p></div>
+            <a
+              href="mailto:info@asgardtowers.com"
+              target="_blank"
+              class="footer__info-item footer__info-link"
+              ><img src="./img/icons/mail.svg" alt="" />
+              <p>info@asgardtowers.com</p></a
+            >
+            <div class="footer__info-item">
+              <p>Georgia, Tbilisi, Saburtalo district, Victor Nozadze St., N 15</p>
+            </div>
+            <a href="tel:+995522222555" target="_blank" class="footer__info-item footer__info-link"
+              ><img src="./img/icons/phone.svg" alt="" />
+              <p>+995 522 222 555</p></a
+            >
+          </div>
+          <div class="footer__text">ASGARD GEORGIA LLC</div>
+        </div>
+      </div>
+    </footer>
 
     <div class="modal__wrapper" data-modal-window="modal">
       <div class="modal__content">
@@ -1000,7 +1033,12 @@
           </div>
 
           <div class="form__checkbox-block">
-            <input type="checkbox" id="agree" name="agree" class="form__input-checkbox" />
+            <input
+              type="checkbox"
+              id="agree"
+              name="agree"
+              class="form__input-checkbox form-agree"
+            />
             <label class="form__input-checkbox-label" for="agree"></label>
             <p>
               Я даю свое согласие на обработку указанных мной данных компаниями ASGARD ESTATE - FZCO

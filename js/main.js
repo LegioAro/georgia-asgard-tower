@@ -99,7 +99,7 @@ isModalClose();
 const forms = document.querySelectorAll('.form-send');
 
 forms.forEach((form) => {
-  const agreeCheckbox = form.querySelector('#agree');
+  const agreeCheckbox = form.querySelector('.form-agree');
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
