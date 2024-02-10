@@ -15,7 +15,7 @@
     justify-content: center;
     .review__img {
       transform-origin: left top;
-      transform: scale(2.2);
+      transform: scale(3);
     }
   }
 
@@ -75,7 +75,7 @@
     &--scale {
       .review__img {
         transform-origin: left top;
-        transform: scale(2.5);
+        transform: scale(3);
       }
     }
     &__btns {
