@@ -71,6 +71,7 @@
 
 @media (max-width: 768px) {
   .review {
+    height: 300px;
     &--scale {
       .review__img {
         transform-origin: left top;
