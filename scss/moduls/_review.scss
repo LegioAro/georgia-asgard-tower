@@ -16,6 +16,8 @@
     .review__img {
       transform-origin: left top;
       transform: scale(3);
+      display: flex;
+      height: auto;
     }
   }
 
