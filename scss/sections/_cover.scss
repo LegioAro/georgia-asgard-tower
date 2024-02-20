@@ -69,11 +69,11 @@
       rgba(32, 28, 32, 0.75) 100%
     );
     width: 100%;
-    max-width: 738px;
+    max-width: fit-content;
   }
 
   &__form-info {
-    margin-right: 47px;
+    // margin-right: 47px;
     max-width: 340px;
   }
 
@@ -81,21 +81,22 @@
     display: flex;
     width: 100%;
     max-width: 100%;
-    margin-bottom: 5px;
+    margin: -136px auto 17px;
   }
 
   &__form-info-text {
     display: flex;
     align-items: center;
+    margin-bottom: 30px;
 
     p {
       color: rgba(239, 239, 239, 0.7);
       font-size: 20px;
       line-height: 120%;
-      text-align: right;
+      text-align: center;
       width: 100%;
       max-width: 280px;
-      margin-right: 40px;
+      margin: 0 auto;
     }
     img {
       display: flex;

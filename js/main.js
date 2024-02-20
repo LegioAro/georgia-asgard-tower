@@ -95,12 +95,29 @@ function isModalClose() {
 }
 isModalClose();
 
+//presentation download
+
+function downloadPresentation() {
+  const downloadFileBtns = document.querySelectorAll('.form-download');
+  const htmlLang = document.querySelector('html').getAttribute('lang');
+
+  downloadFileBtns.forEach((elem) => {
+    elem.addEventListener('click', () => {
+      const download = document.createElement('a');
+      download.setAttribute('href', `./documents/presentation-${htmlLang}.pdf`);
+      download.setAttribute('download', `presentation-${htmlLang}.pdf`);
+      download.click();
+    });
+  });
+}
+downloadPresentation();
+
 //Form
 const forms = document.querySelectorAll('.form-send');
 
 forms.forEach((form) => {
   const agreeCheckbox = form.querySelector('.form-agree');
-  const downloadFile = form.querySelector('.form-download');
+  // const downloadFile = form.querySelector('.form-download');
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -124,14 +141,13 @@ forms.forEach((form) => {
     }
 
     if (result) {
-      if (downloadFile) {
-        const htmlLang = document.querySelector('html').getAttribute('lang');
-
-        const download = document.createElement('a');
-        download.setAttribute('href', `./documents/presentation-${htmlLang}.pdf`);
-        download.setAttribute('download', `presentation-${htmlLang}.pdf`);
-        download.click();
-      }
+      // if (downloadFile) {
+      //   // const htmlLang = document.querySelector('html').getAttribute('lang');
+      //   // const download = document.createElement('a');
+      //   // download.setAttribute('href', `./documents/presentation-${htmlLang}.pdf`);
+      //   // download.setAttribute('download', `presentation-${htmlLang}.pdf`);
+      //   // download.click();
+      // }
 
       form.submit();
       form.reset();
