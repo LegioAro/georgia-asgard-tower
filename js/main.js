@@ -126,26 +126,10 @@ forms.forEach((form) => {
     if (result) {
       if (downloadFile) {
         const htmlLang = document.querySelector('html').getAttribute('lang');
-        let presentationLang;
-
-        switch (htmlLang) {
-          case 'ru':
-            presentationLang = 'ru';
-            break;
-          case 'uk':
-            presentationLang = 'uk';
-            break;
-          case 'en':
-            presentationLang = 'en';
-            break;
-
-          default:
-            presentationLang = 'en';
-        }
 
         const download = document.createElement('a');
-        download.setAttribute('href', `./documents/presentation-${presentationLang}.pdf`);
-        download.setAttribute('download', `presentation-${presentationLang}.pdf`);
+        download.setAttribute('href', `./documents/presentation-${htmlLang}.pdf`);
+        download.setAttribute('download', `presentation-${htmlLang}.pdf`);
         download.click();
       }
 
