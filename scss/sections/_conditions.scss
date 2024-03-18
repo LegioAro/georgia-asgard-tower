@@ -40,6 +40,18 @@
     &--mrg {
       margin-bottom: 10px;
     }
+
+    &--no-mrg {
+      margin-bottom: 0;
+    }
+  }
+
+  &__steps-subtitle {
+    color: rgb(190, 141, 52);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%;
+    text-align: center;
   }
 
   &__steps-items {
@@ -121,6 +133,7 @@
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 12px;
     grid-row-gap: 20px;
+    margin-bottom: 20px;
   }
 
   &__item {
@@ -152,7 +165,7 @@
     &__items {
       grid-template-columns: repeat(2, 1fr);
       max-width: 500px;
-      margin: 0 auto;
+      margin: 0 auto 20px;
     }
   }
 }

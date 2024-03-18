@@ -5,11 +5,31 @@
   background-size: cover;
   padding: 70px 0;
 
+  &--tmpl-2 {
+    background-image: url(../img/market/bg-2.png);
+  }
+
   &__wrapper {
   }
 
   &__title {
     margin-bottom: 24px;
+
+    &--tmpl-2 {
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+
+  &__subtitle {
+    font-family: var(--font-text-2);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 750px;
+    margin: 0 auto 30px;
   }
 
   &__items {
@@ -17,6 +37,13 @@
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+
+    &--tmpl-2 {
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+      max-width: 780px;
+      margin: 0 auto;
+    }
   }
 
   &__item {
@@ -77,6 +104,14 @@
     }
     &__item-title {
       font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .market {
+    &__subtitle {
+      font-size: 18px;
     }
   }
 }
