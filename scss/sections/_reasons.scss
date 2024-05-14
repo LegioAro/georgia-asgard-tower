@@ -138,6 +138,13 @@
     padding: 25px 20px;
   }
 
+  &__desc-block {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   &__desc-text {
     width: 100%;
     max-width: 695px;
