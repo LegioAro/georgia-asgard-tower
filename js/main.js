@@ -26,6 +26,17 @@ const swiper = new Swiper('.projects__item-slider', {
   },
 });
 
+const swiper2 = new Swiper('.layouts__items2-item-img', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  navigation: {
+    nextEl: '.layouts__items2-item-arrow-r',
+    prevEl: '.layouts__items2-item-arrow-l',
+    navigationDisabledClass: 'layouts__items2-item-arrow--disabled',
+  },
+});
+
 function burgerHandle() {
   const burger = document.querySelector('.burger');
   const burgerBtn = document.querySelector('.burger__btn');
