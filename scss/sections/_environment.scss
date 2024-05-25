@@ -30,6 +30,11 @@
   }
 
   &__info-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     p {
       background-image: linear-gradient(
         207.51deg,
@@ -41,7 +46,7 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-fill-color: transparent;
-      font-size: 14px;
+      font-size: 16px;
       line-height: 130%;
       margin-bottom: 20px;
       &:last-child {
@@ -71,7 +76,7 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 130%;
     margin-bottom: 20px;
 

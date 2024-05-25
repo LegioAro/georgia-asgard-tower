@@ -80,12 +80,20 @@
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+    margin-bottom: 30px;
   }
 
   &__img {
     display: flex;
     border-radius: 10px;
     overflow: hidden;
+  }
+
+  &__text {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
   }
 }
 
