@@ -62,6 +62,10 @@
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 158px;
     grid-row-gap: 30px;
+
+    &--noarr {
+      grid-column-gap: 50px;
+    }
   }
 
   &__steps-item {
@@ -87,6 +91,12 @@
         display: none;
       }
     }
+
+    &--noarr {
+      &::before {
+        display: none;
+      }
+    }
   }
 
   &__steps-item-title {
@@ -102,6 +112,13 @@
   &__steps-item-text {
     font-size: 16px;
     line-height: 120%;
+
+    p {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__btn {
@@ -209,6 +226,9 @@
   .conditions {
     &__steps-items {
       grid-column-gap: 108px;
+      &--noarr {
+        grid-column-gap: 50px;
+      }
     }
     &__steps-item {
       &::before {
