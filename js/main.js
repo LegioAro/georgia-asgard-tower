@@ -161,7 +161,6 @@ forms.forEach((form) => {
       // }
 
       form.submit();
-      form.reset();
     }
   });
 });
