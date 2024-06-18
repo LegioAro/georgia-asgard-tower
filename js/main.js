@@ -152,14 +152,6 @@ forms.forEach((form) => {
     }
 
     if (result) {
-      // if (downloadFile) {
-      //   // const htmlLang = document.querySelector('html').getAttribute('lang');
-      //   // const download = document.createElement('a');
-      //   // download.setAttribute('href', `./documents/presentation-${htmlLang}.pdf`);
-      //   // download.setAttribute('download', `presentation-${htmlLang}.pdf`);
-      //   // download.click();
-      // }
-
       form.submit();
     }
   });

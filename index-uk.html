@@ -1,6 +1,49 @@
 <!DOCTYPE html>
 <html lang="uk">
   <head>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '832433985425052');
+      fbq('track', 'PageView');
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=832433985425052&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-NGPQ4QF6');
+    </script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="img/favocon.ico" />
@@ -18,6 +61,17 @@
     <title>ЖК “Asgard Towers”</title>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NGPQ4QF6"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <header class="header">
       <div class="container container--big">
         <div class="header__wrapper">
@@ -1161,7 +1215,11 @@
         <div class="modal__btn-close">
           <span class="icon-close"></span>
         </div>
-        <form id="form" class="form form-send" action="/" method="post">
+        <form id="form" class="form form-send" action="send.php" method="post">
+          <input type="hidden" name="sponsor" value="<?=$sponsor?>" />
+          <input type="hidden" name="landing" value="https://asgardtowers.com" />
+          <input type="hidden" name="back" value="/success-uk.php" />
+          <input type="hidden" name="language" value="UK" />
           <div class="form__title">
             Щоб отримати консультацію менеджера, будь ласка, внесіть свої дані в полях нижче
           </div>
@@ -1249,6 +1307,7 @@
       </div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/intlTelInput.js"></script>
     <script src="./js/utils.js"></script>
     <script src="./js/form-validation.js"></script>
@@ -1257,56 +1316,44 @@
     <script src="./js/main.js"></script>
 
     <script>
-      (function () {
-        // Load the script
-        const script = document.createElement('script');
-        script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js';
-        script.type = 'text/javascript';
-        script.addEventListener('load', () => {
-          console.log(`jQuery ${$.fn.jquery} has been loaded successfully!`);
-          // use jQuery below
-        });
-        document.head.appendChild(script);
-      })();
+      jQuery(function () {
+        var processed = false;
+        jQuery(document).on('submit', '#form', function (e) {
+          if (processed) return;
+          processed = true;
+          e.preventDefault();
+          e.stopPropagation();
+          note = 'Form\nURL: ' + window.location.href;
 
-      var $ = jQuery;
-      var processed = false;
-      $(document).on('submit', '#form', function (e) {
-        if (processed) return;
-
-        processed = true;
-        e.preventDefault();
-        e.stopPropagation();
-        note = 'Form\nURL: ' + window.location.href;
-
-        var url = new URL(window.location.href);
-        data = {
-          action: 'partner-custom-form',
-          token: 'v6-7WwRvAazLB9rfvhP77suWO5AuHYi2GURKGXlVEGI',
-          partner_id: 19212,
-          name: `${$(this).find('[name=name]').val()} ${$(this)
-            .find('[name=surname]')
-            .val()}`.trim(),
-          email: '',
-          phone: $(this).find('[name=phone]').val(),
-          lang: $('.header__lang--active').text().trim().toLowerCase(),
-          note: note,
-          utm_source: url.searchParams.get('utm_source') || '',
-          utm_medium: url.searchParams.get('utm_medium') || '',
-          utm_campaign: url.searchParams.get('utm_campaign') || '',
-          utm_term: url.searchParams.get('utm_term') || '',
-          utm_content: url.searchParams.get('utm_content') || '',
-          utm_referrer: url.searchParams.get('utm_referrer') || '',
-          adv_id: 'website_form',
-        };
-        if (!data.name || !data.phone) return;
-        var obj = $(this);
-        $.ajax({
-          url: 'https://crm.g-plus.app/api/actions',
-          method: 'post',
-          data: data,
-        }).done(function () {
-          obj.submit();
+          var url = new URL(window.location.href);
+          data = {
+            action: 'partner-custom-form',
+            token: 'v6-7WwRvAazLB9rfvhP77suWO5AuHYi2GURKGXlVEGI',
+            partner_id: 19212,
+            name: `${$(this).find('[name=name]').val()} ${$(this)
+              .find('[name=surname]')
+              .val()}`.trim(),
+            email: '',
+            phone: $(this).find('[name=phone]').val(),
+            lang: $('.header__lang--active').text().trim().toLowerCase(),
+            note: note,
+            utm_source: url.searchParams.get('utm_source') || '',
+            utm_medium: url.searchParams.get('utm_medium') || '',
+            utm_campaign: url.searchParams.get('utm_campaign') || '',
+            utm_term: url.searchParams.get('utm_term') || '',
+            utm_content: url.searchParams.get('utm_content') || '',
+            utm_referrer: url.searchParams.get('utm_referrer') || '',
+            adv_id: 'website_form',
+          };
+          if (!data.name || !data.phone) return;
+          var obj = $(this);
+          $.ajax({
+            url: 'https://crm.g-plus.app/api/actions',
+            method: 'post',
+            data: data,
+          }).done(function () {
+            obj.submit();
+          });
         });
       });
     </script>
