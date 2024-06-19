@@ -41,7 +41,7 @@
         j.async = true;
         j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-NGPQ4QF6');
+      })(window, document, 'script', 'dataLayer', 'GTM-TCJDHXFT');
     </script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
@@ -65,7 +65,7 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-NGPQ4QF6"
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TCJDHXFT"
         height="0"
         width="0"
         style="display: none; visibility: hidden"
@@ -1311,44 +1311,56 @@
     <script src="./js/main.js"></script>
 
     <script>
-      jQuery(function () {
-        var processed = false;
-        jQuery(document).on('submit', '#form', function (e) {
-          if (processed) return;
-          processed = true;
-          e.preventDefault();
-          e.stopPropagation();
-          note = 'Form\nURL: ' + window.location.href;
+      (function () {
+        // Load the script
+        const script = document.createElement('script');
+        script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js';
+        script.type = 'text/javascript';
+        script.addEventListener('load', () => {
+          console.log(`jQuery ${$.fn.jquery} has been loaded successfully!`);
+          // use jQuery below
+        });
+        document.head.appendChild(script);
+      })();
 
-          var url = new URL(window.location.href);
-          data = {
-            action: 'partner-custom-form',
-            token: 'v6-7WwRvAazLB9rfvhP77suWO5AuHYi2GURKGXlVEGI',
-            partner_id: 19212,
-            name: `${$(this).find('[name=name]').val()} ${$(this)
-              .find('[name=surname]')
-              .val()}`.trim(),
-            email: '',
-            phone: $(this).find('[name=phone]').val(),
-            lang: $('.header__lang--active').text().trim().toLowerCase(),
-            note: note,
-            utm_source: url.searchParams.get('utm_source') || '',
-            utm_medium: url.searchParams.get('utm_medium') || '',
-            utm_campaign: url.searchParams.get('utm_campaign') || '',
-            utm_term: url.searchParams.get('utm_term') || '',
-            utm_content: url.searchParams.get('utm_content') || '',
-            utm_referrer: url.searchParams.get('utm_referrer') || '',
-            adv_id: 'website_form',
-          };
-          if (!data.name || !data.phone) return;
-          var obj = $(this);
-          $.ajax({
-            url: 'https://crm.g-plus.app/api/actions',
-            method: 'post',
-            data: data,
-          }).done(function () {
-            obj.submit();
-          });
+      var $ = jQuery;
+      var processed = false;
+      $(document).on('submit', '#form', function (e) {
+        if (processed) return;
+
+        processed = true;
+        e.preventDefault();
+        e.stopPropagation();
+        note = 'Form\nURL: ' + window.location.href;
+
+        var url = new URL(window.location.href);
+        data = {
+          action: 'partner-custom-form',
+          token: 'v6-7WwRvAazLB9rfvhP77suWO5AuHYi2GURKGXlVEGI',
+          partner_id: 19212,
+          name: `${$(this).find('[name=name]').val()} ${$(this)
+            .find('[name=surname]')
+            .val()}`.trim(),
+          email: '',
+          phone: $(this).find('[name=phone]').val(),
+          lang: $('.header__lang--active').text().trim().toLowerCase(),
+          note: note,
+          utm_source: url.searchParams.get('utm_source') || '',
+          utm_medium: url.searchParams.get('utm_medium') || '',
+          utm_campaign: url.searchParams.get('utm_campaign') || '',
+          utm_term: url.searchParams.get('utm_term') || '',
+          utm_content: url.searchParams.get('utm_content') || '',
+          utm_referrer: url.searchParams.get('utm_referrer') || '',
+          adv_id: 'website_form',
+        };
+        if (!data.name || !data.phone) return;
+        var obj = $(this);
+        $.ajax({
+          url: 'https://crm.g-plus.app/api/actions',
+          method: 'post',
+          data: data,
+        }).done(function () {
+          obj.submit();
         });
       });
     </script>
