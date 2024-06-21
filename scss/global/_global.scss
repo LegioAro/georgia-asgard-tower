@@ -34,3 +34,8 @@ body {
 .g__building-button i {
   background: #be8d34 !important;
 }
+
+body .g__building-button {
+  left: 20px;
+  right: unset;
+}
