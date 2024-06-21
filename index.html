@@ -86,16 +86,16 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-     <!-- Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
     <noscript
-    ><iframe
-      src="https://www.googletagmanager.com/ns.html?id=GTM-TCJDHXFT"
-      height="0"
-      width="0"
-      style="display: none; visibility: hidden"
-    ></iframe
-  ></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TCJDHXFT"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <header class="header">
       <div class="container container--big">
@@ -1399,6 +1399,41 @@
           });
         });
       }
+    </script>
+
+    <script type="text/javascript">
+      (function (a) {
+        function init() {
+          window.embed_cb = true;
+          jQuery
+            .ajax({
+              url: 'https://crm.g-plus.app/api/actions',
+              method: 'post',
+              data: {
+                action: 'get-callback-widget',
+                lang: 'ru',
+                token: a,
+                session_key: window.localStorage.getItem('cb-session-key') || '',
+              },
+            })
+            .done(function (data) {
+              jQuery(data.html).appendTo('body');
+            });
+        }
+        if (typeof jQuery === 'undefined') {
+          var script = document.createElement('SCRIPT');
+          script.src = 'https://code.jquery.com/jquery-1.12.4.min.js';
+          script.type = 'text/javascript';
+          script.onload = function () {
+            $ = window.jQuery;
+            init();
+          };
+          document.getElementsByTagName('head')[0].appendChild(script);
+        } else {
+          init();
+          $ = window.jQuery;
+        }
+      })('183f5429e1c64c3cbf905653d15bf885');
     </script>
   </body>
 </html>
