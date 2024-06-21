@@ -39,3 +39,10 @@ body .g__building-button {
   left: 20px;
   right: unset;
 }
+
+#layout-iframe {
+  z-index: 10001 !important;
+}
+.btn-close-iframe {
+  z-index: 10002 !important;
+}
