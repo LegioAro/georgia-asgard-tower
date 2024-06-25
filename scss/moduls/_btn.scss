@@ -18,4 +18,9 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  &--small {
+    font-size: 18px;
+    padding: 13px 10px;
+  }
 }
