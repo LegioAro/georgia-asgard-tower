@@ -122,7 +122,7 @@
       border: 2px solid #790007;
       opacity: 0;
       border-radius: 5px;
-      animation: pulse 2.5s linear infinite;
+      animation: pulse-btn 2.5s linear infinite;
     }
 
     &::after {
@@ -130,7 +130,7 @@
     }
   }
 
-  @keyframes pulse {
+  @keyframes pulse-btn {
     0% {
       transform: scaleX(0.9) scaleY(0.9);
       opacity: 0;
