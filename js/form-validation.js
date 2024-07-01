@@ -1,156 +1,160 @@
 const inputs = document.querySelectorAll('.val');
 
 inputs.forEach((input) => {
-  input.addEventListener('input', () => {
-    let inputValue = input.value;
-    let resultReg = '';
-    let newValue = '';
-    if (input.classList.contains('val-telegram')) {
-      const regVal = /[a-z0-9\.\-\_]+/gis;
-      let regArr = inputValue.matchAll(regVal);
-
-      for (let elem of regArr) {
-        resultReg += String(elem);
-      }
-
-      newValue = '@' + resultReg;
-      if (newValue.length < 4) {
-        input.classList.add('novalid');
-      } else {
-        input.classList.remove('novalid');
-      }
-    }
-
-    if (input.classList.contains('val-name')) {
-      const regVal = /[^0-9]+/gis;
-      const regName = /([a-zа-я])+/g;
-      let regArr = inputValue.matchAll(regVal);
-      for (let elem of regArr) {
-        resultReg += String(elem);
-      }
-      newValue = resultReg;
-
-      if (newValue.length >= 3 && regName.test(newValue)) {
-        input.classList.remove('novalid');
-      } else {
-        input.classList.add('novalid');
-      }
-    }
-
-    if (input.classList.contains('val-email')) {
-      let regEmail = /[-.\w]+@([\w-]+\.)+[\w-]+/g;
-      let regVal = /[-.\w@]/g;
-      let regArr = inputValue.matchAll(regVal);
-      for (let elem of regArr) {
-        resultReg += String(elem);
-      }
-      newValue = resultReg;
-      if (newValue.length >= 3 && regEmail.test(newValue)) {
-        input.classList.remove('novalid');
-      } else {
-        input.classList.add('novalid');
-      }
-    }
-
-    if (input.classList.contains('val-tel')) {
-      let regTel;
-
-      const select = document.querySelector('.modal__input-select-item input:checked');
-      const selectValue = select.value;
-      let regVal = /[0-9]+/g;
-      let regArr = inputValue.matchAll(regVal);
-      for (let elem of regArr) {
-        resultReg += String(elem);
-      }
-
-      let resultRegArr = resultReg.split('');
-
-      if (selectValue == 'ru') {
-        regTel = /^\+?[78]\s\(\d{3}\)\s\d{3}-\d{2}-\d{0,3}$/g;
-        input.setAttribute('maxlength', '18');
-        for (let i = 0; i < resultRegArr.length; i++) {
-          if (i === 0) {
-            resultRegArr.splice(i, 0, '+');
-          }
-          if (i == 2) {
-            resultRegArr.splice(i, 0, ' (');
-          }
-          if (i == 6) {
-            resultRegArr.splice(i, 0, ') ');
-          }
-          if (i == 10 || i == 13) {
-            resultRegArr.splice(i, 0, '-');
-          }
-          resultReg = resultRegArr.join('');
-          newValue = resultReg;
-
-          if (newValue.length >= 18 && regTel.test(newValue)) {
-            input.classList.remove('novalid');
-          } else {
-            input.classList.add('novalid');
-          }
-        }
-      }
-
-      if (selectValue == 'ukr') {
-        regTel = /^\+?3\d\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/g;
-        input.setAttribute('maxlength', '19');
-
-        for (let i = 0; i < resultRegArr.length; i++) {
-          if (i === 0) {
-            resultRegArr.splice(i, 2, '+38');
-          }
-          if (i == 1) {
-            resultRegArr.splice(i, 0, ' (');
-          }
-          if (i == 5) {
-            resultRegArr.splice(i, 0, ') ');
-          }
-          if (i == 9 || i == 12) {
-            resultRegArr.splice(i, 0, '-');
-          }
-        }
-        resultReg = resultRegArr.join('');
-        newValue = resultReg;
-
-        if (newValue.length >= 19 && regTel.test(newValue)) {
-          input.classList.remove('novalid');
-        } else {
-          input.classList.add('novalid');
-        }
-      }
-
-      if (selectValue == 'tur') {
-        regTel = /^\+?90\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/g;
-        input.setAttribute('maxlength', '19');
-        for (let i = 0; i < resultRegArr.length; i++) {
-          if (i === 0) {
-            resultRegArr.splice(i, 0, '+');
-          }
-          if (i == 3) {
-            resultRegArr.splice(i, 0, ' (');
-          }
-          if (i == 7) {
-            resultRegArr.splice(i, 0, ') ');
-          }
-          if (i == 11 || i == 14) {
-            resultRegArr.splice(i, 0, '-');
-          }
-        }
-        resultReg = resultRegArr.join('');
-        newValue = resultReg;
-
-        if (newValue.length >= 19 && regTel.test(newValue)) {
-          input.classList.remove('novalid');
-        } else {
-          input.classList.add('novalid');
-        }
-      }
-    }
-
-    input.value = newValue;
-  });
+  input.addEventListener('input', () => inputHandler(input));
+  input.addEventListener('paste', () => inputHandler(input));
+  input.addEventListener('change', () => inputHandler(input));
 });
+
+function inputHandler(input) {
+  let inputValue = input.value;
+  let resultReg = '';
+  let newValue = '';
+  if (input.classList.contains('val-telegram')) {
+    const regVal = /[a-z0-9\.\-\_]+/gis;
+    let regArr = inputValue.matchAll(regVal);
+
+    for (let elem of regArr) {
+      resultReg += String(elem);
+    }
+
+    newValue = '@' + resultReg;
+    if (newValue.length < 4) {
+      input.classList.add('novalid');
+    } else {
+      input.classList.remove('novalid');
+    }
+  }
+
+  if (input.classList.contains('val-name')) {
+    const regVal = /[^0-9]+/gis;
+    const regName = /([a-zа-я])+/g;
+    let regArr = inputValue.matchAll(regVal);
+    for (let elem of regArr) {
+      resultReg += String(elem);
+    }
+    newValue = resultReg;
+
+    if (newValue.length >= 3 && regName.test(newValue)) {
+      input.classList.remove('novalid');
+    } else {
+      input.classList.add('novalid');
+    }
+  }
+
+  if (input.classList.contains('val-email')) {
+    let regEmail = /[-.\w]+@([\w-]+\.)+[\w-]+/g;
+    let regVal = /[-.\w@]/g;
+    let regArr = inputValue.matchAll(regVal);
+    for (let elem of regArr) {
+      resultReg += String(elem);
+    }
+    newValue = resultReg;
+    if (newValue.length >= 3 && regEmail.test(newValue)) {
+      input.classList.remove('novalid');
+    } else {
+      input.classList.add('novalid');
+    }
+  }
+
+  if (input.classList.contains('val-tel')) {
+    let regTel;
+
+    const select = document.querySelector('.modal__input-select-item input:checked');
+    const selectValue = select.value;
+    let regVal = /[0-9]+/g;
+    let regArr = inputValue.matchAll(regVal);
+    for (let elem of regArr) {
+      resultReg += String(elem);
+    }
+
+    let resultRegArr = resultReg.split('');
+
+    if (selectValue == 'ru') {
+      regTel = /^\+?[78]\s\(\d{3}\)\s\d{3}-\d{2}-\d{0,3}$/g;
+      input.setAttribute('maxlength', '18');
+      for (let i = 0; i < resultRegArr.length; i++) {
+        if (i === 0) {
+          resultRegArr.splice(i, 0, '+');
+        }
+        if (i == 2) {
+          resultRegArr.splice(i, 0, ' (');
+        }
+        if (i == 6) {
+          resultRegArr.splice(i, 0, ') ');
+        }
+        if (i == 10 || i == 13) {
+          resultRegArr.splice(i, 0, '-');
+        }
+        resultReg = resultRegArr.join('');
+        newValue = resultReg;
+
+        if (newValue.length >= 18 && regTel.test(newValue)) {
+          input.classList.remove('novalid');
+        } else {
+          input.classList.add('novalid');
+        }
+      }
+    }
+
+    if (selectValue == 'ukr') {
+      regTel = /^\+?3\d\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/g;
+      input.setAttribute('maxlength', '19');
+
+      for (let i = 0; i < resultRegArr.length; i++) {
+        if (i === 0) {
+          resultRegArr.splice(i, 2, '+38');
+        }
+        if (i == 1) {
+          resultRegArr.splice(i, 0, ' (');
+        }
+        if (i == 5) {
+          resultRegArr.splice(i, 0, ') ');
+        }
+        if (i == 9 || i == 12) {
+          resultRegArr.splice(i, 0, '-');
+        }
+      }
+      resultReg = resultRegArr.join('');
+      newValue = resultReg;
+
+      if (newValue.length >= 19 && regTel.test(newValue)) {
+        input.classList.remove('novalid');
+      } else {
+        input.classList.add('novalid');
+      }
+    }
+
+    if (selectValue == 'tur') {
+      regTel = /^\+?90\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/g;
+      input.setAttribute('maxlength', '19');
+      for (let i = 0; i < resultRegArr.length; i++) {
+        if (i === 0) {
+          resultRegArr.splice(i, 0, '+');
+        }
+        if (i == 3) {
+          resultRegArr.splice(i, 0, ' (');
+        }
+        if (i == 7) {
+          resultRegArr.splice(i, 0, ') ');
+        }
+        if (i == 11 || i == 14) {
+          resultRegArr.splice(i, 0, '-');
+        }
+      }
+      resultReg = resultRegArr.join('');
+      newValue = resultReg;
+
+      if (newValue.length >= 19 && regTel.test(newValue)) {
+        input.classList.remove('novalid');
+      } else {
+        input.classList.add('novalid');
+      }
+    }
+  }
+
+  input.value = newValue;
+}
 
 //validation phone
 
@@ -236,7 +240,7 @@ inputsPhone.forEach((input) => {
           errorMsg.classList.add('novalid');
 
           var errorCode = iti.getValidationError();
-          errorMsg.innerHTML = errorMap[errorCode];
+          errorMsg.innerHTML = errorMap[errorCode] || 'Недействительный номер';
         }
       }
     });
@@ -244,6 +248,44 @@ inputsPhone.forEach((input) => {
     input.addEventListener('change', reset);
     input.addEventListener('keyup', reset);
   });
+
+  const parentForm = input.closest('.form-send');
+  if (parentForm) {
+    const agreeCheckbox = parentForm.querySelector('.form-agree');
+    // const downloadFile = form.querySelector('.form-download');
+
+    parentForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!iti.isValidNumber()) {
+        message.innerHTML = 'Invalid number. Please try again.';
+        return false;
+      }
+      let formInputs = parentForm.querySelectorAll('input');
+      let result = true;
+
+      formInputs.forEach((input) => {
+        if (input.classList.contains('novalid')) {
+          result = false;
+        }
+
+        if (input.getAttribute('type') === 'tel' && input.value.length < 4) {
+          result = false;
+        }
+      });
+
+      if (agreeCheckbox) {
+        if (!agreeCheckbox.checked) {
+          result = false;
+        }
+      }
+
+      if (result === true) {
+        parentForm.submit();
+      } else {
+        return false;
+      }
+    });
+  }
 });
 
 const qwe = document.querySelector('.form__input');
