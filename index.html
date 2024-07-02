@@ -1363,13 +1363,40 @@
 
       function init_crm_form() {
         var $ = jQuery;
-        var processed = false;
+        var processed = true;
         $(document).on('submit', '#form', function (e) {
-          if (processed) return;
-
-          processed = true;
+          if (processed === false) return;
+          // processed = true;
           e.preventDefault();
           e.stopPropagation();
+
+          var obj = $(this);
+
+          //validation
+
+          let result = true;
+          const agreeCheckbox = obj.find('.form-agree');
+          const inputs = obj.find('input');
+
+          inputs.each(function () {
+            const input = $(this);
+            if (input.hasClass('novalid')) {
+              result = false;
+            }
+            if (input.attr('type') === 'tel' && input.val().length < 4) {
+              result = false;
+            }
+          });
+          if (agreeCheckbox) {
+            if (!agreeCheckbox.prop('checked')) {
+              result = false;
+            }
+          }
+
+          if (result === false) return;
+
+          //end validation
+
           note = 'Form\nURL: ' + window.location.href;
 
           var url = new URL(window.location.href);
@@ -1393,13 +1420,15 @@
             adv_id: 'website_form',
           };
           if (!data.name || !data.phone) return;
-          var obj = $(this);
+
           $.ajax({
             url: 'https://crm.g-plus.app/api/actions',
             method: 'post',
             data: data,
           }).done(function () {
             obj.submit();
+            processed = false;
+            setTimeout(() => (processed = true), 30000);
           });
         });
       }

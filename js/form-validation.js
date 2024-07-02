@@ -249,43 +249,41 @@ inputsPhone.forEach((input) => {
     input.addEventListener('keyup', reset);
   });
 
-  const parentForm = input.closest('.form-send');
-  if (parentForm) {
-    const agreeCheckbox = parentForm.querySelector('.form-agree');
-    // const downloadFile = form.querySelector('.form-download');
+  // const parentForm = input.closest('.form-send');
+  // if (parentForm) {
+  //   const agreeCheckbox = parentForm.querySelector('.form-agree');
+  //   // const downloadFile = form.querySelector('.form-download');
 
-    parentForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (!iti.isValidNumber()) {
-        message.innerHTML = 'Invalid number. Please try again.';
-        return false;
-      }
-      let formInputs = parentForm.querySelectorAll('input');
-      let result = true;
+  //   parentForm.addEventListener('submit', function (e) {
+  //     e.preventDefault();
+  //     if (!iti.isValidNumber()) {
+  //       // message.innerHTML = 'Invalid number. Please try again.';
+  //       return false;
+  //     }
+  //     let formInputs = parentForm.querySelectorAll('input');
+  //     let result = true;
 
-      formInputs.forEach((input) => {
-        if (input.classList.contains('novalid')) {
-          result = false;
-        }
+  //     formInputs.forEach((input) => {
+  //       if (input.classList.contains('novalid')) {
+  //         result = false;
+  //       }
 
-        if (input.getAttribute('type') === 'tel' && input.value.length < 4) {
-          result = false;
-        }
-      });
+  //       if (input.getAttribute('type') === 'tel' && input.value.length < 4) {
+  //         result = false;
+  //       }
+  //     });
 
-      if (agreeCheckbox) {
-        if (!agreeCheckbox.checked) {
-          result = false;
-        }
-      }
+  //     if (agreeCheckbox) {
+  //       if (!agreeCheckbox.checked) {
+  //         result = false;
+  //       }
+  //     }
 
-      if (result === true) {
-        parentForm.submit();
-      } else {
-        return false;
-      }
-    });
-  }
+  //     if (result === true) {
+  //       parentForm.submit();
+  //     } else {
+  //       return false;
+  //     }
+  //   });
+  // }
 });
-
-const qwe = document.querySelector('.form__input');
