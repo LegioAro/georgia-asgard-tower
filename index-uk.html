@@ -1248,6 +1248,12 @@
           <input type="hidden" name="landing" value="https://asgardtowers.com" />
           <input type="hidden" name="back" value="/success-uk.php" />
           <input type="hidden" name="language" value="UK" />
+          <!-- utm-->
+          <input type="hidden" name="utm_source" value="" />
+          <input type="hidden" name="utm_medium" value="" />
+          <input type="hidden" name="utm_referrer" value="" />
+          <input type="hidden" name="utm_content" value="" />
+
           <div class="form__title">
             Щоб отримати консультацію менеджера, будь ласка, внесіть свої дані в полях нижче
           </div>
@@ -1347,7 +1353,7 @@
       (function () {
         // Load the script
         const script = document.createElement('script');
-        script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js';
+        script.src = './js/jquery.min.js';
         script.type = 'text/javascript';
         script.addEventListener('load', () => {
           console.log(`jQuery ${$.fn.jquery} has been loaded successfully!`);
@@ -1367,6 +1373,20 @@
           e.stopPropagation();
 
           var obj = $(this);
+          note = 'Form\nURL: ' + window.location.href;
+          var url = new URL(window.location.href);
+
+          //utm
+
+          const utm_source = obj.find('input[name=utm_source]');
+          const utm_medium = obj.find('input[name=utm_medium]');
+          const utm_referrer = obj.find('input[name=utm_referrer]');
+          const utm_content = obj.find('input[name=utm_content]');
+
+          utm_source.val(url.searchParams.get('utm_source') || '');
+          utm_medium.val(url.searchParams.get('utm_medium') || '');
+          utm_referrer.val(url.searchParams.get('utm_referrer') || '');
+          utm_content.val(url.searchParams.get('utm_content') || '');
 
           //validation
 
@@ -1393,9 +1413,6 @@
 
           //end validation
 
-          note = 'Form\nURL: ' + window.location.href;
-
-          var url = new URL(window.location.href);
           data = {
             action: 'partner-custom-form',
             token: 'v6-7WwRvAazLB9rfvhP77suWO5AuHYi2GURKGXlVEGI',
@@ -1422,7 +1439,7 @@
             method: 'post',
             data: data,
           }).done(function () {
-            obj.submit();
+            // obj.submit();
             processed = false;
             setTimeout(() => (processed = true), 30000);
           });
