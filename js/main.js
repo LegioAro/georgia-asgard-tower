@@ -123,69 +123,94 @@ function downloadPresentation() {
 }
 downloadPresentation();
 
-//Form
+//categorys
 
+const categorys = document.querySelectorAll('.categorys');
+
+if (categorys.length > 0) {
+  categorys.forEach((categoryBlock) => {
+    const categorysNames = categoryBlock.querySelectorAll('*[data-category]');
+    const categorysContents = document.querySelectorAll('*[data-category-content]');
+
+    categorysNames.forEach((categorysName) => {
+      categorysName.addEventListener('click', () => {
+        const categorysNameAttr = categorysName.getAttribute('data-category');
+        const categorysNameContents = document.querySelectorAll(
+          `*[data-category-content=${categorysNameAttr}]`,
+        );
+
+        categorysNames.forEach((item) => item.classList.remove('active'));
+        categorysName.classList.add('active');
+
+        if (categorysNameAttr === 'all') {
+          categorysContents.forEach((item) => item.classList.remove('hide'));
+        } else {
+          categorysContents.forEach((item) => item.classList.add('hide'));
+          categorysNameContents.forEach((item) => item.classList.remove('hide'));
+        }
+      });
+    });
+  });
+}
 
 //review
 
 const reviewBtns = document.querySelectorAll('*[data-review-btn]');
 const review = document.querySelector('*[data-review-img]');
-const reviewImg = review.querySelector('.review__img');
-const reviewZoomBtns = review.querySelectorAll('.review__btn');
-
-if (reviewBtns.length > 0 && reviewImg) {
-  reviewBtns.forEach((reviewBtn) => {
-    reviewBtn.addEventListener('click', () => {
-      review.classList.remove('review--scale');
-      const sourceBigImg = reviewBtn.getAttribute('data-review-big');
-      reviewImg.setAttribute('src', sourceBigImg);
+if (review) {
+  const reviewImg = review.querySelector('.review__img');
+  const reviewZoomBtns = review.querySelectorAll('.review__btn');
+  if (reviewBtns.length > 0 && reviewImg) {
+    reviewBtns.forEach((reviewBtn) => {
+      reviewBtn.addEventListener('click', () => {
+        review.classList.remove('review--scale');
+        const sourceBigImg = reviewBtn.getAttribute('data-review-big');
+        reviewImg.setAttribute('src', sourceBigImg);
+      });
     });
-  });
-}
+  }
 
-if (reviewZoomBtns.length > 0) {
-  reviewZoomBtns.forEach((zoomBtn) => {
-    zoomBtn.addEventListener('click', () => {
-      if (zoomBtn.hasAttribute('data-review-zoom')) {
-        let zoomBtnAttr = zoomBtn.getAttribute('data-review-zoom');
+  if (reviewZoomBtns.length > 0) {
+    reviewZoomBtns.forEach((zoomBtn) => {
+      zoomBtn.addEventListener('click', () => {
+        if (zoomBtn.hasAttribute('data-review-zoom')) {
+          let zoomBtnAttr = zoomBtn.getAttribute('data-review-zoom');
 
-        if (zoomBtnAttr === 'plus') {
-          review.classList.add('review--scale');
-        } else if (zoomBtnAttr === 'minus') {
-          review.classList.remove('review--scale');
+          if (zoomBtnAttr === 'plus') {
+            review.classList.add('review--scale');
+          } else if (zoomBtnAttr === 'minus') {
+            review.classList.remove('review--scale');
+          }
         }
-      }
+      });
     });
-  });
+
+    review.onmousedown = () => {
+      let pageX = 0;
+      let pageY = 0;
+
+      document.onmousemove = (e) => {
+        if (pageX !== 0) {
+          review.scrollLeft = review.scrollLeft + (pageX - e.pageX);
+        }
+        if (pageY !== 0) {
+          review.scrollTop = review.scrollTop + (pageY - e.pageY);
+        }
+        pageX = e.pageX;
+        pageY = e.pageY;
+      };
+
+      review.onmouseup = () => {
+        document.onmousemove = null;
+        review.onmouseup = null;
+      };
+
+      review.ondragstart = () => {
+        return false;
+      };
+    };
+  }
 }
-
-if (window.innerHeight > 1024) {
-}
-
-review.onmousedown = () => {
-  let pageX = 0;
-  let pageY = 0;
-
-  document.onmousemove = (e) => {
-    if (pageX !== 0) {
-      review.scrollLeft = review.scrollLeft + (pageX - e.pageX);
-    }
-    if (pageY !== 0) {
-      review.scrollTop = review.scrollTop + (pageY - e.pageY);
-    }
-    pageX = e.pageX;
-    pageY = e.pageY;
-  };
-
-  review.onmouseup = () => {
-    document.onmousemove = null;
-    review.onmouseup = null;
-  };
-
-  review.ondragstart = () => {
-    return false;
-  };
-};
 
 //layout btn
 const layoutBtns = document.querySelectorAll('.layout-btn');
