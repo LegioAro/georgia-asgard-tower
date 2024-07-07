@@ -1,9 +1,9 @@
 isResize('.infrastructure__imgs', '.infrastructure__content', '.infrastructure__mob', 1150);
-isResize('.header__content', '.header__wrapper', '.burger', 1100);
+isResize('.header__content', '.header__wrapper', '.burger', 1200);
 
 window.addEventListener('resize', () => {
   isResize('.infrastructure__imgs', '.infrastructure__content', '.infrastructure__mob', 1150);
-  isResize('.header__content', '.header__wrapper', '.burger', 1100);
+  isResize('.header__content', '.header__wrapper', '.burger', 1200);
 });
 
 const swiper = new Swiper('.projects__item-slider', {

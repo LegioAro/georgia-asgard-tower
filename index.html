@@ -100,6 +100,7 @@
     <header class="header">
       <div class="container container--big">
         <div class="header__wrapper">
+          <a href="./index.html" class="header__logo"><img src="./img/logo.svg" alt="" /></a>
           <button class="header__btn layout-btn">
             <p>Обзор планировок</p>
             <img src="./img/icons/house.svg" alt="" />
@@ -111,13 +112,17 @@
                 Инфраструктура
               </button>
               <button class="header__link" data-scroll-smooth="environment">Расположение</button>
-              <a href="./pages/progress/progress.html" class="header__link">Ход работ</a>
+              <button class="header__link" data-scroll-smooth="work-progress">Ход работ</button>
               <button class="header__link" data-scroll-smooth="footer">Контакты</button>
             </nav>
             <div class="header__langs">
-              <div class="header__lang header__lang--active">RU</div>
-              <a href="./index-en.html" class="header__lang">EN</a>
-              <a href="./index-uk.html" class="header__lang">UA</a>
+              <div class="header__langs-select">
+                <span>RU</span><img src="./img/icons/arrow-d.svg" alt="" />
+              </div>
+              <div class="header__langs-items">
+                <a href="./index-en.html" class="header__lang">EN</a>
+                <a href="./index-uk.html" class="header__lang">UA</a>
+              </div>
             </div>
           </div>
           <button class="burger__btn"><span></span></button>
@@ -1198,6 +1203,34 @@
               <div class="conditions__steps-subtitle">от 1400$</div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-progress" id="work-progress">
+      <div class="container container--big">
+        <div class="work-progress__wrapper">
+          <div class="work-progress__title title">Ход работ</div>
+          <div class="work-progress__items">
+            <a href="./pages/progress/progress-page-1.html" class="work-progress__item"
+              ><img src="./img/work-progress/1.jpg" alt=""
+            /></a>
+            <a href="./pages/progress/progress-page-1.html" class="work-progress__item"
+              ><img src="./img/work-progress/1.jpg" alt=""
+            /></a>
+            <a href="./pages/progress/progress-page-1.html" class="work-progress__item"
+              ><img src="./img/work-progress/1.jpg" alt=""
+            /></a>
+            <a href="./pages/progress/progress-page-1.html" class="work-progress__item"
+              ><img src="./img/work-progress/1.jpg" alt=""
+            /></a>
+            <a href="./pages/progress/progress-page-1.html" class="work-progress__item"
+              ><img src="./img/work-progress/1.jpg" alt=""
+            /></a>
+          </div>
+          <a href="./pages/progress/progress.html" class="work-progress__btn btn">
+            Весь ход работ
+          </a>
         </div>
       </div>
     </section>
