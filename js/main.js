@@ -42,11 +42,13 @@ function burgerHandle() {
   const burgerBtn = document.querySelector('.burger__btn');
   // const body = document.querySelector('body');
 
-  burgerBtn.addEventListener('click', () => {
-    burger.classList.toggle('burger--active');
-    burgerBtn.classList.toggle('burger__btn--active');
-    // body.classList.toggle('body--lock');
-  });
+  if (burgerBtn && burger) {
+    burgerBtn.addEventListener('click', () => {
+      burger.classList.toggle('burger--active');
+      burgerBtn.classList.toggle('burger__btn--active');
+      // body.classList.toggle('body--lock');
+    });
+  }
 }
 
 burgerHandle();
