@@ -119,6 +119,11 @@
   &__item-text-video {
     height: 500px;
   }
+
+  &__btn {
+    max-width: 200px;
+    margin-bottom: 40px;
+  }
 }
 
 @media (max-width: 1800px) {
